@@ -6,6 +6,9 @@ import recommendationRouter from "../modules/recommendations/recommendation.rout
 import schemeRouter from "../modules/schemes/scheme.routes";
 import searchRouter from "../modules/search/search.routes";
 
+
+import ingestionRouter from "../modules/ingestion/ingestion.routes";
+
 const apiRouter = Router();
 
 apiRouter.use("/auth", authRouter);
@@ -14,5 +17,6 @@ apiRouter.use("/schemes", schemeRouter);
 apiRouter.use("/search", searchRouter);
 apiRouter.use("/recommendations", recommendationRouter);
 apiRouter.use("/chatbot", chatbotRouter);
+apiRouter.use("/ingestion", ingestionRouter);
 
 export default apiRouter;

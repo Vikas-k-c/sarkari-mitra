@@ -8,56 +8,129 @@ datasource db {
 }
 
 model User {
-  id            String   @id @default(uuid())
-  fullName      String
-  mobile        String   @unique
-  passwordHash  String
-  language      String   @default("en")
+  id           String @id @default(uuid())
+  fullName     String
+  mobile       String @unique
+  passwordHash String
+  language     String @default("en")
 
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  profile       Profile?
-  chatHistory   ChatHistory[]
+  profile     Profile?
+  chatHistory ChatHistory[]
+  interactions UserSchemeInteraction[]
 
   @@map("users")
 }
 
 model Profile {
-  id            String   @id @default(uuid())
+  id String @id @default(uuid())
 
-  userId        String   @unique
-  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  age           Int
-  gender        String
-  occupation    String
-  income        Int
+  age        Int
+  gender     String
+  occupation String
+  income     Int
 
-  education     String
+  education String
 
-  state         String
-  district      String
+  state    String
+  district String
 
-  category      String
+  category String
 
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@map("profiles")
 }
 
 model ChatHistory {
-  id            String   @id @default(uuid())
+  id String @id @default(uuid())
 
-  userId        String
-  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  question      String
-  answer        String
+  question String
+  answer   String
 
-  createdAt     DateTime @default(now())
+  createdAt DateTime @default(now())
 
   @@index([userId, createdAt])
   @@map("chat_history")
+}
+
+model Scheme {
+  id             String   @id @default(uuid())
+  title          String
+  description    String
+  benefits       String?
+  applicationUrl String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  categoryId String
+  category   SchemeCategory @relation(fields: [categoryId], references: [id])
+
+  sourceId String?
+  source   SchemeSource? @relation(fields: [sourceId], references: [id])
+
+  externalId   String @default(uuid())
+  sourceSystem String @default("manual")
+
+  eligibility EligibilityRule[]
+  documents   SchemeDocument[]
+  interactions UserSchemeInteraction[]
+
+  @@unique([externalId, sourceSystem])
+}
+
+model SchemeCategory {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  schemes     Scheme[]
+}
+
+model EligibilityRule {
+  id        String @id @default(uuid())
+  schemeId  String
+  attribute String // e.g., 'age', 'income', 'caste'
+  operator  String // e.g., '>=', '<=', '==', 'IN'
+  value     String
+
+  scheme Scheme @relation(fields: [schemeId], references: [id], onDelete: Cascade)
+}
+
+model SchemeDocument {
+  id         String  @id @default(uuid())
+  schemeId   String
+  name       String
+  isRequired Boolean @default(true)
+
+  scheme Scheme @relation(fields: [schemeId], references: [id], onDelete: Cascade)
+}
+
+model SchemeSource {
+  id      String   @id @default(uuid())
+  name    String   @unique
+  url     String?
+  schemes Scheme[]
+}
+
+model UserSchemeInteraction {
+  id        String   @id @default(uuid())
+  userId    String
+  schemeId  String
+  type      String   // e.g., 'VIEW', 'APPLY', 'FAVORITE', 'RATE'
+  timestamp DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id])
+  scheme Scheme @relation(fields: [schemeId], references: [id])
+
+  @@index([userId, schemeId])
 }

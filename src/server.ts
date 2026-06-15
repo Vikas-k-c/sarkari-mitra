@@ -35,6 +35,11 @@ const shutdown = async (signal: string): Promise<void> => {
 
 const startServer = async (): Promise<void> => {
   await connectDatabase();
+  const { initializeElasticsearch } = await import('./elastic/client');
+  await initializeElasticsearch();
+  
+  const { startIngestionScheduler } = await import('./modules/ingestion/scheduler');
+  startIngestionScheduler();
 
   server = app.listen(env.PORT, () => {
     logger.info("Sarkari Mitra API started", {

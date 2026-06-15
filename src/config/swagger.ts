@@ -27,6 +27,8 @@ export const swaggerSpec = swaggerJsdoc({
     tags: [
       { name: "Authentication", description: "User registration and login" },
       { name: "Profiles", description: "Authenticated citizen profile management" },
+      { name: "Schemes", description: "Government schemes management and discovery" },
+      { name: "Recommendations", description: "Personalized scheme recommendations" },
     ],
     components: {
       securitySchemes: {
@@ -271,6 +273,29 @@ export const swaggerSpec = swaggerJsdoc({
             timestamp: { type: "string", format: "date-time" },
           },
         },
+        Scheme: {
+          type: "object",
+          properties: {
+            id: { type: "string", format: "uuid" },
+            title: { type: "string" },
+            description: { type: "string" },
+            benefits: { type: "string" },
+            categoryId: { type: "string", format: "uuid" },
+            isActive: { type: "boolean" },
+          },
+        },
+        CreateSchemeRequest: {
+          type: "object",
+          required: ["title", "description", "categoryId"],
+          properties: {
+            title: { type: "string" },
+            description: { type: "string" },
+            categoryId: { type: "string", format: "uuid" },
+            benefits: { type: "string" },
+            applicationUrl: { type: "string" },
+            sourceId: { type: "string", format: "uuid" },
+          },
+        },
       },
     },
     paths: {
@@ -399,6 +424,77 @@ export const swaggerSpec = swaggerJsdoc({
             "401": errorResponse,
             "404": errorResponse,
             "422": errorResponse,
+          },
+        },
+      },
+      "/api/v1/schemes": {
+        get: {
+          summary: "Get all active schemes",
+          tags: ["Schemes"],
+          responses: {
+            "200": {
+              description: "List of schemes",
+            },
+          },
+        },
+        post: {
+          summary: "Create a new scheme",
+          tags: ["Schemes"],
+          requestBody: {
+            required: true,
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/CreateSchemeRequest",
+                },
+              },
+            },
+          },
+          responses: {
+            "201": {
+              description: "Scheme created successfully",
+            },
+          },
+        },
+      },
+      "/api/v1/recommendations": {
+        get: {
+          summary: "Get personalized scheme recommendations",
+          tags: ["Recommendations"],
+          security: [{ bearerAuth: [] }],
+          responses: {
+            "200": {
+              description: "List of recommended schemes with match scores",
+            },
+            "401": errorResponse,
+          },
+        },
+      },
+      "/api/v1/recommendations/interact": {
+        post: {
+          summary: "Log user interaction with a scheme",
+          tags: ["Recommendations"],
+          security: [{ bearerAuth: [] }],
+          requestBody: {
+            required: true,
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  required: ["schemeId", "type"],
+                  properties: {
+                    schemeId: { type: "string", format: "uuid" },
+                    type: { type: "string", example: "VIEW" },
+                  },
+                },
+              },
+            },
+          },
+          responses: {
+            "201": {
+              description: "Interaction logged successfully",
+            },
+            "401": errorResponse,
           },
         },
       },
