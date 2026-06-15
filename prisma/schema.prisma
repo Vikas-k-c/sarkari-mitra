@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(uuid())
+  fullName      String
+  mobile        String   @unique
+  passwordHash  String
+  language      String   @default("en")
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  profile       Profile?
+  chatHistory   ChatHistory[]
+
+  @@map("users")
+}
+
+model Profile {
+  id            String   @id @default(uuid())
+
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  age           Int
+  gender        String
+  occupation    String
+  income        Int
+
+  education     String
+
+  state         String
+  district      String
+
+  category      String
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("profiles")
+}
+
+model ChatHistory {
+  id            String   @id @default(uuid())
+
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  question      String
+  answer        String
+
+  createdAt     DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@map("chat_history")
+}
