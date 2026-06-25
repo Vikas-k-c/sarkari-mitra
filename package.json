@@ -21,8 +21,10 @@
     "node": ">=22.0.0"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^9.4.2",
+    "@elastic/elasticsearch": "^8.19.1",
+    "@google/generative-ai": "^0.24.1",
     "@prisma/client": "^6.11.1",
+    "@qdrant/js-client-rest": "^1.18.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",

@@ -4,10 +4,12 @@ import { SearchService } from './search.service';
 export class SearchController {
   static async search(req: Request, res: Response, next: NextFunction) {
     try {
-      const { q, categoryId, state, fuzzy } = req.query;
+      const { q, query, categoryId, state, fuzzy } = req.query;
       
+      const searchTerm = (q as string) || (query as string);
+
       const results = await SearchService.searchSchemes(
-        q as string,
+        searchTerm,
         categoryId as string,
         state as string,
         fuzzy === 'true'

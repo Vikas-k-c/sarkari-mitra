@@ -62,6 +62,9 @@ const envSchema = z.object({
     .int()
     .positive()
     .default(5_000),
+  GEMINI_API_KEY: z.string().optional(),
+  QDRANT_URL: z.string().default("http://localhost:6333"),
+  QDRANT_API_KEY: z.string().optional(),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);

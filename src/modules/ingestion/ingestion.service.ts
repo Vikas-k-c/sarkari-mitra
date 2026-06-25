@@ -6,6 +6,7 @@ import { MySchemeAdapter } from './adapters/myscheme.adapter';
 import { DataGovAdapter } from './adapters/datagov.adapter';
 import { StatePortalAdapter } from './adapters/stateportal.adapter';
 import { logger } from '../../utils/logger';
+import { RagService } from '../rag/rag.service';
 
 export class IngestionService {
   private adapters: ISourceAdapter[] = [
@@ -93,7 +94,7 @@ export class IngestionService {
                 benefits: createdScheme.benefits,
                 categoryId: createdScheme.categoryId,
                 categoryName: createdScheme.category.name,
-                state: undefined, // State is not explicitly parsed in this mock
+                state: undefined,
                 isActive: createdScheme.isActive,
                 createdAt: createdScheme.createdAt,
                 eligibility: createdScheme.eligibility.map(e => ({
@@ -105,8 +106,10 @@ export class IngestionService {
             });
           } catch (esError: any) {
             logger.error(`Failed to reindex scheme ${createdScheme.id} to Elasticsearch:`, { error: esError.message || esError });
-            // Not treating ES failure as a complete ingestion failure for stats, but you could.
           }
+
+          // Qdrant Vectorization & Storage
+          await RagService.embedAndStoreScheme(createdScheme);
 
           inserted++;
         }

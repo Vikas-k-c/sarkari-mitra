@@ -18,7 +18,7 @@ model User {
   updatedAt DateTime @updatedAt
 
   profile     Profile?
-  chatHistory ChatHistory[]
+  chatSessions ChatSession[]
   interactions UserSchemeInteraction[]
 
   @@map("users")
@@ -48,19 +48,28 @@ model Profile {
   @@map("profiles")
 }
 
-model ChatHistory {
-  id String @id @default(uuid())
+model ChatSession {
+  id        String        @id @default(uuid())
+  userId    String
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String?
+  language  String        @default("en")
+  messages  ChatMessage[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
 
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("chat_sessions")
+}
 
-  question String
-  answer   String
+model ChatMessage {
+  id        String      @id @default(uuid())
+  sessionId String
+  session   ChatSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  role      String
+  content   String
+  createdAt DateTime    @default(now())
 
-  createdAt DateTime @default(now())
-
-  @@index([userId, createdAt])
-  @@map("chat_history")
+  @@map("chat_messages")
 }
 
 model Scheme {
