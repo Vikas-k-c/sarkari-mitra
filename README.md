@@ -5,15 +5,19 @@
 
 <br />
 
-## 📖 Overview
+## 🚨 The Problem Statement
 
-India has hundreds of active government schemes (Yojanas) at both the central and state levels. However, millions of eligible citizens fail to benefit from these programs due to information asymmetry, complex eligibility criteria, language barriers, and a lack of digital literacy.
+India has hundreds of active government schemes (Yojanas) at both the central and state levels designed to help citizens with agriculture, education, healthcare, and financial security. However, millions of eligible citizens fail to benefit from these programs due to:
+1. **Information Asymmetry**: Schemes are scattered across various portals, making them hard to discover.
+2. **Complex Eligibility Criteria**: Understanding who qualifies for what is often convoluted.
+3. **Language Barriers**: Most official documentation is heavily rooted in English or complex formal Hindi.
+4. **Digital Literacy**: Marginalized communities often struggle to navigate complex web forms.
 
-**Sarkari Mitra** (Government Friend) solves this problem by providing a voice-first, multilingual, AI-powered mobile assistant. It democratizes access to government schemes by personalizing recommendations and providing conversational AI support in native regional languages.
+## 💡 Our Solution
 
-## ✨ Key Features
+**Sarkari Mitra** (Government Friend) is a voice-first, multilingual, AI-powered mobile assistant that democratizes access to government schemes.
 
-- 🎯 **Personalized Eligibility Engine**: Users enter a simple demographic profile (age, income, state, caste, occupation) and receive precisely matched scheme recommendations.
+- 🎯 **Personalized Recommendations**: Users enter a simple demographic profile (age, income, state, caste, occupation) and receive precisely matched scheme recommendations.
 - 🎙️ **Voice-First AI Chatbot**: Built-in dictation (Speech-to-Text) and Text-to-Speech (TTS) allows users to ask questions naturally without navigating complex menus.
 - 🌐 **Real-Time Translation**: Powered by Google's Gemini AI, all complex government terminology and scheme details are translated on-the-fly into the user's preferred language (e.g., Hindi).
 - 🔍 **Semantic Search (RAG)**: Leverages Elasticsearch and Vector Embeddings to provide highly accurate answers to user queries based strictly on official scheme documents.
