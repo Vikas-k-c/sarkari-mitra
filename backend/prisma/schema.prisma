@@ -1,0 +1,147 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String @id @default(uuid())
+  fullName     String
+  mobile       String @unique
+  passwordHash String
+  language     String @default("en")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile     Profile?
+  chatSessions ChatSession[]
+  interactions UserSchemeInteraction[]
+
+  @@map("users")
+}
+
+model Profile {
+  id String @id @default(uuid())
+
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  age        Int
+  gender     String
+  occupation String
+  income     Int
+
+  education String
+
+  state    String
+  district String
+
+  category String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("profiles")
+}
+
+model ChatSession {
+  id        String        @id @default(uuid())
+  userId    String
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String?
+  language  String        @default("en")
+  messages  ChatMessage[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@map("chat_sessions")
+}
+
+model ChatMessage {
+  id        String      @id @default(uuid())
+  sessionId String
+  session   ChatSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  role      String
+  content   String
+  createdAt DateTime    @default(now())
+
+  @@map("chat_messages")
+}
+
+model Scheme {
+  id             String   @id @default(uuid())
+  title          String
+  description    String
+  benefits       String?
+  applicationUrl String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  categoryId String
+  category   SchemeCategory @relation(fields: [categoryId], references: [id])
+
+  sourceId String?
+  source   SchemeSource? @relation(fields: [sourceId], references: [id])
+
+  externalId   String @default(uuid())
+  sourceSystem String @default("manual")
+
+  applicationDeadline DateTime?
+
+  eligibility EligibilityRule[]
+  documents   SchemeDocument[]
+  interactions UserSchemeInteraction[]
+
+  @@unique([externalId, sourceSystem])
+}
+
+model SchemeCategory {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  schemes     Scheme[]
+}
+
+model EligibilityRule {
+  id        String @id @default(uuid())
+  schemeId  String
+  attribute String // e.g., 'age', 'income', 'caste'
+  operator  String // e.g., '>=', '<=', '==', 'IN'
+  value     String
+
+  scheme Scheme @relation(fields: [schemeId], references: [id], onDelete: Cascade)
+}
+
+model SchemeDocument {
+  id         String  @id @default(uuid())
+  schemeId   String
+  name       String
+  isRequired Boolean @default(true)
+
+  scheme Scheme @relation(fields: [schemeId], references: [id], onDelete: Cascade)
+}
+
+model SchemeSource {
+  id      String   @id @default(uuid())
+  name    String   @unique
+  url     String?
+  schemes Scheme[]
+}
+
+model UserSchemeInteraction {
+  id        String   @id @default(uuid())
+  userId    String
+  schemeId  String
+  type      String   // e.g., 'VIEW', 'APPLY', 'FAVORITE', 'RATE'
+  timestamp DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id])
+  scheme Scheme @relation(fields: [schemeId], references: [id])
+
+  @@index([userId, schemeId])
+}

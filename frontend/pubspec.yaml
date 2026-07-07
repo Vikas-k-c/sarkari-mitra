@@ -1,0 +1,37 @@
+name: sarkari_mitra
+description: Sarkari Mitra - AI-powered government scheme discovery platform.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.5.1
+  
+  # Networking
+  http: ^1.2.1
+  
+  # Local Storage
+  shared_preferences: ^2.2.3
+  
+  # Voice & AI
+  speech_to_text: ^6.6.0
+  flutter_tts: ^3.8.3
+  
+  # UI Utilities
+  google_fonts: ^6.2.1
+  flutter_markdown: ^0.7.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
