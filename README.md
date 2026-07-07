@@ -1,110 +1,155 @@
-# Sarkari Mitra 🇮🇳
+<div align="center">
+  <h1>🏛️ Sarkari Mitra 🇮🇳</h1>
+  <p><strong>Bridging the gap between Indian citizens and government welfare schemes through AI.</strong></p>
+</div>
 
-An AI-powered mobile application designed to bridge the gap between Indian citizens and government welfare schemes.
+<br />
 
-## The Real World Problem 🚨
-India has hundreds of active government schemes (Yojanas) at both the central and state levels designed to help citizens with agriculture, education, healthcare, and financial security. However, millions of eligible citizens fail to benefit from these programs due to:
-1. **Information Asymmetry**: Schemes are scattered across various portals, making them hard to discover.
-2. **Complex Eligibility Criteria**: Understanding who qualifies for what is often convoluted.
-3. **Language Barriers**: Most official documentation is heavily rooted in English or complex formal Hindi.
-4. **Digital Literacy**: Marginalized communities often struggle to navigate complex web forms.
+## 📖 Overview
 
-## Our Solution 💡
-**Sarkari Mitra** (Government Friend) is a voice-first, multilingual, AI-powered mobile assistant that democratizes access to government schemes. 
-- **Personalized Recommendations**: Users create a simple profile (age, income, state, caste, occupation), and the system filters the exact schemes they are eligible for.
-- **AI Chat & Voice**: Users can simply tap a microphone and ask (in English or Hindi) about schemes. The AI responds via Text-to-Speech (TTS), eliminating the need for reading complex documents.
-- **Real-time Translation**: Leveraging Google's Gemini AI, scheme details are translated natively on-the-fly to the user's preferred language.
+India has hundreds of active government schemes (Yojanas) at both the central and state levels. However, millions of eligible citizens fail to benefit from these programs due to information asymmetry, complex eligibility criteria, language barriers, and a lack of digital literacy.
 
-## Tech Stack 🛠️
+**Sarkari Mitra** (Government Friend) solves this problem by providing a voice-first, multilingual, AI-powered mobile assistant. It democratizes access to government schemes by personalizing recommendations and providing conversational AI support in native regional languages.
 
-### Frontend (Mobile App)
-* **Framework**: Flutter (Dart)
-* **State Management**: Riverpod
-* **Accessibility**: `flutter_tts` (Text-to-Speech), `speech_to_text` (Dictation)
-* **UI Architecture**: Component-based, modern Material UI
+## ✨ Key Features
 
-### Backend (API Server)
-* **Runtime**: Node.js with Express & TypeScript
-* **Database ORM**: Prisma
-* **Primary Database**: PostgreSQL (Stores users, profiles, and basic scheme metadata)
-* **Search Engine**: Elasticsearch (Vector DB for RAG & Semantic Search)
-* **AI Provider**: Google Gemini (gemini-2.5-flash) - Handles embeddings, natural language chat, and translation.
+- 🎯 **Personalized Eligibility Engine**: Users enter a simple demographic profile (age, income, state, caste, occupation) and receive precisely matched scheme recommendations.
+- 🎙️ **Voice-First AI Chatbot**: Built-in dictation (Speech-to-Text) and Text-to-Speech (TTS) allows users to ask questions naturally without navigating complex menus.
+- 🌐 **Real-Time Translation**: Powered by Google's Gemini AI, all complex government terminology and scheme details are translated on-the-fly into the user's preferred language (e.g., Hindi).
+- 🔍 **Semantic Search (RAG)**: Leverages Elasticsearch and Vector Embeddings to provide highly accurate answers to user queries based strictly on official scheme documents.
 
-## Architecture Diagram 🏗️
+---
+
+## 🏗️ System Architecture
+
+The platform follows a modern, decoupled microservices-inspired architecture designed for scalability and high performance.
 
 ```mermaid
-flowchart TD
-    subgraph Mobile App [Flutter Frontend]
-        UI[User Interface]
-        Voice[Speech & TTS Engine]
-        API_Client[API Client]
+graph TD
+    %% Define Styles
+    classDef client fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef api fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    classDef data fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100
+    classDef external fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px,color:#4a148c
+
+    %% Presentation Layer
+    subgraph Presentation Layer ["📱 Presentation Layer"]
+        Flutter["Flutter Mobile App<br/>(Riverpod UI State)"]:::client
+        TTS["Voice Engine<br/>(Speech-to-Text & TTS)"]:::client
+        Flutter <--> TTS
     end
 
-    subgraph Backend API [Node.js / Express]
-        Auth[Auth Module]
-        Profile[Profile Module]
-        Schemes[Schemes Module]
-        Chat[Chat / RAG Module]
-        GeminiService[Gemini Integration]
+    %% API / Business Logic Layer
+    subgraph Business Logic ["⚙️ API & Business Logic Layer (Node.js)"]
+        Gateway["Express API Gateway<br/>(REST & Middleware)"]:::api
+        AuthSvc["Auth & Profiles<br/>(JWT, BCrypt)"]:::api
+        SchemeSvc["Scheme Engine<br/>(Filtering & Logic)"]:::api
+        ChatSvc["RAG Pipeline<br/>(Context & Prompting)"]:::api
     end
 
-    subgraph Data Layer
-        PG[(PostgreSQL)]
-        ES[(Elasticsearch)]
+    %% Data & Storage Layer
+    subgraph Data Layer ["💾 Data & Storage Layer"]
+        Postgres[(PostgreSQL<br/>Relational Data)]:::data
+        Prisma["Prisma ORM"]:::data
+        ES[(Elasticsearch<br/>Vector & Text Search)]:::data
     end
 
-    subgraph External
-        Gemini[Google Gemini API]
+    %% External Services
+    subgraph External Services ["🌍 External Services"]
+        Gemini["Google Gemini AI<br/>(LLM & Embeddings)"]:::external
     end
 
-    %% Frontend to Backend
-    UI <--> API_Client
-    Voice <--> UI
-    API_Client -- HTTP REST --> Auth
-    API_Client -- HTTP REST --> Profile
-    API_Client -- HTTP REST --> Schemes
-    API_Client -- HTTP REST --> Chat
+    %% Connections
+    Flutter -- "HTTPS / REST" --> Gateway
+    Gateway --> AuthSvc
+    Gateway --> SchemeSvc
+    Gateway --> ChatSvc
 
-    %% Backend internals
-    Auth --> PG
-    Profile --> PG
-    Schemes --> PG
-    Schemes --> GeminiService
-    Chat --> GeminiService
-    Chat --> ES
+    AuthSvc <--> Prisma
+    SchemeSvc <--> Prisma
+    Prisma <--> Postgres
+    
+    SchemeSvc <--> ES
+    ChatSvc <--> ES
 
-    %% External APIs
-    GeminiService -- gRPC / REST --> Gemini
+    ChatSvc -- "gRPC / HTTPS" --> Gemini
+    SchemeSvc -- "Translation" --> Gemini
 ```
 
-## Getting Started 🚀
+---
 
-### Backend Setup
-```bash
-npm install
-copy .env.example .env
-npm run prisma:generate
-npm run prisma:migrate:dev
-npm run dev
-```
+## 🛠️ Technology Stack
 
-Use a strong random `JWT_SECRET` in every deployed environment.
-Set `TRUST_PROXY_HOPS` only when the API is behind a trusted reverse proxy.
-Disable public API documentation in production with `SWAGGER_ENABLED=false` unless access is restricted at the gateway.
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | Flutter (Dart), Riverpod, Material 3, flutter_tts, speech_to_text |
+| **Backend** | Node.js, Express.js, TypeScript, Zod |
+| **Database** | PostgreSQL, Prisma ORM |
+| **Search Engine** | Elasticsearch (BM25 + Vector Search) |
+| **AI / ML** | Google Gemini (gemini-2.5-flash) |
+| **Security** | JWT, BCrypt, Express Rate Limiter |
 
-**API Endpoints Overview:**
-- `GET /health/live`
-- `GET /health/ready`
-- `GET /api-docs`
-- `POST /api/v1/auth/register`
-- `POST /api/v1/auth/login`
-- `GET /api/v1/auth/me`
+---
 
-### Frontend Setup
-1. Navigate to the `frontend/` directory.
-2. Run `flutter pub get`.
-3. Ensure your emulator or physical device is connected.
-4. Run `flutter run`.
+## 🚀 Getting Started
 
-## License
-MIT License
+Follow these steps to set up the project locally for development and testing.
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (v3.19 or higher)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Elasticsearch](https://www.elastic.co/elasticsearch/)
+- A Google Gemini API Key
+
+### 1. Backend Setup
+
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure the environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   *Edit `.env` to include your `DATABASE_URL`, `ELASTICSEARCH_NODE`, and `GEMINI_API_KEY`.*
+4. Initialize the database schema:
+   ```bash
+   npm run prisma:generate
+   npm run prisma:migrate:dev
+   ```
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   *The API will be available at `http://localhost:5000`.*
+
+### 2. Frontend (Mobile) Setup
+
+1. Open a new terminal and navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Install Flutter packages:
+   ```bash
+   flutter pub get
+   ```
+3. Ensure you have a connected device (Android/iOS emulator or physical device).
+4. Run the application:
+   ```bash
+   flutter run
+   ```
+
+---
+
+## 🔒 Security Best Practices
+- **Production Environment**: Ensure you use a strong, cryptographically secure `JWT_SECRET`.
+- **API Documentation**: Disable Swagger UI in production by setting `SWAGGER_ENABLED=false` unless access is explicitly restricted at your API Gateway.
+- **Proxy Configuration**: Set `TRUST_PROXY_HOPS` only if the application is running behind a trusted reverse proxy (e.g., NGINX, Render, AWS ALB).
+
+## 📄 License
+This project is licensed under the MIT License.
