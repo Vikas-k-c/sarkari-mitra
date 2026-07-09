@@ -1,122 +1,145 @@
 # BACKLOG.md
 
-## Technical Debt
+## Production Improvements
 
-### High Priority
+### Government Data
 
-* Make Elasticsearch index version-controlled.
-* Improve recommendation weighting algorithm.
-* Improve mandatory vs optional eligibility rules.
-* Batch ingestion using concurrency.
-* Bulk Elasticsearch indexing.
-* Better duplicate detection reporting.
-* Retry failed Elasticsearch indexing.
-* Validate scheduler frequency.
-* Manual ingestion monitoring dashboard.
+* Replace mock adapters with official APIs wherever available.
+* Expand synchronization to additional state government portals.
+* Improve duplicate detection using source metadata.
+* Add incremental synchronization based on lastUpdated timestamps.
+* Improve checksum generation for change detection.
 
 ---
 
-## Medium Priority
+## Search
 
-* Recommendation caching.
-* Better Swagger examples.
-* Improved DTOs.
-* Better validation for ingestion adapters.
-* Better logging.
-* Better analytics for recommendations.
-* Better error categorization.
-* Improve recommendation explanations.
+* Elasticsearch Bulk Indexing.
+* Version-controlled Elasticsearch mappings.
+* Better synonym support.
+* Search analytics.
+* Search suggestions.
+* Auto-complete.
 
 ---
 
-## Low Priority
+## Recommendation Engine
 
-* Redis caching.
-* Materialized recommendation views.
-* Recommendation A/B testing.
-* Elasticsearch nested queries.
-* Optimized profile lookup.
-* Dynamic recommendation weights.
-* State-specific recommendation tuning.
+* Weighted recommendation scoring.
+* Dynamic rule weighting.
+* Recommendation confidence score.
+* Better explainability.
+* Popularity-based ranking.
+* Behaviour-based personalization.
 
 ---
-
-# Future Features
 
 ## AI
 
-* Multi-turn Conversations
-* Tool Calling
-* Function Calling
-* Memory Optimization
-* Conversation Summaries
+* Conversation Memory Optimization.
+* Function Calling.
+* Tool Calling.
+* Follow-up Question Suggestions.
+* AI-generated eligibility summaries.
+* AI-powered scheme comparison.
 
 ---
 
 ## Voice
 
-* Streaming Speech-to-Text
-* Streaming Text-to-Speech
-* Voice Activity Detection
-* Wake Word Support
+* Streaming Speech-to-Text.
+* Streaming Text-to-Speech.
+* Voice interruption handling.
+* Noise suppression.
+* Offline speech recognition.
 
 ---
 
-## Citizen Assistance
+## Citizen Services
 
-* Document Upload
-* OCR
-* Eligibility Calculator
-* Application Tracker
-* Scheme Comparison
-
----
-
-## Government Integrations
-
-* MyScheme API
-* Data.gov.in API
-* State Government APIs
-* Automatic Daily Synchronization
-* Webhook Support
-
----
-
-## Mobile
-
-* Offline Support
-* Push Notifications
-* Saved Schemes
-* Favorite Schemes
-* Recent Searches
-* Voice Shortcuts
+* Application Tracking.
+* Document Upload.
+* OCR-based document verification.
+* Eligibility Calculator.
+* Scheme Comparison.
+* Saved Schemes.
+* Favorites.
+* Notifications.
 
 ---
 
 ## Admin Portal
 
-* Scheme Management
-* User Analytics
-* Recommendation Analytics
-* Ingestion Monitoring
-* Search Analytics
-* Error Dashboard
+* Admin Dashboard.
+* Scheme Management.
+* Analytics Dashboard.
+* Search Analytics.
+* Recommendation Analytics.
+* Synchronization Monitoring.
+* Error Monitoring.
+* User Feedback Dashboard.
+
+---
+
+## DevOps
+
+* Docker.
+* CI/CD Pipeline.
+* GitHub Actions Deployment.
+* Monitoring.
+* Logging Stack.
+* Health Checks.
+* Automated Backups.
+
+---
+
+## Performance
+
+* Redis Caching.
+* Background Job Queue.
+* Bulk Database Operations.
+* API Rate Limiting.
+* CDN Integration.
+* Query Optimization.
+
+---
+
+## Security
+
+* Refresh Tokens.
+* Role-Based Access Control (RBAC).
+* API Key Rotation.
+* Secrets Management.
+* Audit Logging.
+
+---
+
+## Deployment
+
+Frontend
+
+* Firebase Hosting or Vercel.
+
+Backend
+
+* Render / Railway / Azure App Service.
+
+Database
+
+* Neon PostgreSQL or Supabase PostgreSQL.
+
+Search
+
+* Elastic Cloud.
+
+Vector Database
+
+* Qdrant Cloud.
 
 ---
 
 # Placement Scope
 
-The following are **not required** before placements:
+Everything required for interviews, demonstrations and resume projects is complete.
 
-* Kubernetes
-* Microservices
-* Redis
-* Docker Swarm
-* Kafka
-* RabbitMQ
-* CI/CD Pipelines
-* Distributed Scheduling
-* High Availability
-* Multi-region Deployment
-
-These can be implemented after placements if required.
+Remaining items are production-scale enhancements and are intentionally deferred.

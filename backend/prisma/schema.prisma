@@ -72,15 +72,26 @@ model ChatMessage {
   @@map("chat_messages")
 }
 
+enum GovernmentLevel {
+  CENTRAL
+  STATE
+  JOINT
+}
+
+enum VerificationStatus {
+  VERIFIED
+  REVIEW_REQUIRED
+}
+
 model Scheme {
-  id             String   @id @default(uuid())
-  title          String
-  description    String
-  benefits       String?
-  applicationUrl String?
-  isActive       Boolean  @default(true)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id               String   @id @default(uuid())
+  title            String
+  description      String
+  benefits         String?
+  applicationUrl   String?
+  isActive         Boolean  @default(true)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   categoryId String
   category   SchemeCategory @relation(fields: [categoryId], references: [id])
@@ -88,8 +99,27 @@ model Scheme {
   sourceId String?
   source   SchemeSource? @relation(fields: [sourceId], references: [id])
 
-  externalId   String @default(uuid())
-  sourceSystem String @default("manual")
+  externalId       String   @default(uuid())
+  sourceSystem     String   @default("manual")
+  sourceUrl        String?
+  checksum         String?
+  
+  shortDescription String?
+  ministry         String?
+  state            String?
+  language         String   @default("en")
+  
+  governmentLevel    GovernmentLevel @default(CENTRAL)
+  verificationStatus VerificationStatus @default(REVIEW_REQUIRED)
+  secondaryCategories String[]
+
+  applicationProcess String?
+  faq                Json?
+  keywords           String[]
+
+  lastFetched      DateTime?
+  lastUpdated      DateTime?
+  lastVerified     DateTime?
 
   applicationDeadline DateTime?
 

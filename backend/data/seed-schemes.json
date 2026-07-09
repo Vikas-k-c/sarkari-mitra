@@ -1,0 +1,2001 @@
+[
+  {
+    "externalId": "SEED-FARMER-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "shortDescription": "Income support of Rs. 6,000 per year to all landholding farmer families.",
+    "description": "PM-KISAN is a Central Sector scheme with 100% funding from Government of India. It aims to supplement the financial needs of small and marginal farmers in procuring various inputs to ensure proper crop health and appropriate yields. Under the scheme, an income support of 6,000/- per year in three equal installments will be provided to all land holding farmer families.",
+    "benefits": "Financial benefit of Rs. 6000/- per annum per family payable in three equal installments of Rs. 2000/- each, every four months.",
+    "applicationUrl": "https://pmkisan.gov.in/",
+    "sourceUrl": "https://pmkisan.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Income Support",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible farmers can apply through the official PM-KISAN portal using the 'New Farmer Registration' link or by visiting the nearest Common Service Centres (CSCs). State governments identify eligible farmers and upload their data.",
+    "faq": [
+      {
+        "question": "Who is eligible for PM-KISAN?",
+        "answer": "All landholding farmer families, which consist of husband, wife and minor children who own cultivable land as per the land records."
+      },
+      {
+        "question": "Are there any exclusion criteria?",
+        "answer": "Yes, institutional landholders, farmer families holding constitutional posts, serving/retired government employees, and income tax payees are excluded."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      },
+      {
+        "attribute": "landOwnership",
+        "operator": "==",
+        "value": "Yes"
+      },
+      {
+        "attribute": "incomeTaxPayee",
+        "operator": "==",
+        "value": "No"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Citizenship certificate",
+      "Landholding papers",
+      "Bank account details"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "shortDescription": "Comprehensive crop insurance scheme protecting farmers against non-preventable natural risks.",
+    "description": "PMFBY provides comprehensive insurance cover against failure of the crop thus helping in stabilizing the income of the farmers. It covers all food & oilseed crops and annual commercial/horticultural crops for which past yield data is available. The scheme encourages farmers to adopt innovative and modern agricultural practices.",
+    "benefits": "Provides insurance coverage and financial support to the farmers in the event of failure of any of the notified crops as a result of natural calamities, pests & diseases. Premium to be paid by farmers is very low (1.5% - 2% for Rabi/Kharif, 5% for commercial/horticulture).",
+    "applicationUrl": "https://pmfby.gov.in/",
+    "sourceUrl": "https://pmfby.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Insurance",
+      "Risk Management"
+    ],
+    "governmentLevel": "JOINT",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers can apply via the National Crop Insurance Portal (NCIP), through authorized banks, CSCs, or insurance company representatives before the cut-off dates for Kharif and Rabi seasons.",
+    "faq": [
+      {
+        "question": "What is the premium rate for farmers?",
+        "answer": "Maximum 2% for Kharif crops, 1.5% for Rabi crops, and 5% for annual commercial and horticultural crops."
+      },
+      {
+        "question": "Is PMFBY mandatory?",
+        "answer": "No, PMFBY is voluntary for all farmers, including those with existing crop loans (loanee farmers)."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Land Record / Tenancy Agreement",
+      "Sowing Certificate"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "Kisan Credit Card (KCC)",
+    "shortDescription": "Provides adequate and timely credit support from the banking system to the farmers.",
+    "description": "The Kisan Credit Card scheme aims to provide adequate and timely credit support from the banking system under a single window with flexible and simplified procedure to the farmers for their cultivation and other needs like purchase of agriculture inputs such as seeds, fertilizers, pesticides, etc. It includes a subvention on interest rates to make credit affordable.",
+    "benefits": "Short term credit limit for crops and term loans. Interest subvention of 2% p.a., with an additional 3% for prompt repayment, making the effective interest rate 4%. Covers post-harvest expenses and consumption requirements.",
+    "applicationUrl": "https://sbi.co.in/web/agri-rural/agriculture-banking/crop-loan/kisan-credit-card",
+    "sourceUrl": "https://agricoop.gov.in/",
+    "ministry": "Ministry of Finance / Ministry of Agriculture",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Credit",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers must approach their nearest bank branch (commercial, cooperative, or Regional Rural Bank) and submit the KCC application form along with land documents and identity proof.",
+    "faq": [
+      {
+        "question": "Are tenant farmers eligible for KCC?",
+        "answer": "Yes, tenant farmers, oral lessees, and sharecroppers are eligible for the Kisan Credit Card."
+      },
+      {
+        "question": "What is the maximum limit of collateral-free agriculture loans?",
+        "answer": "The limit for collateral-free agriculture loans has been raised from Rs. 1 lakh to Rs. 1.6 lakh."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "PAN Card / Voter ID",
+      "Land Ownership Documents",
+      "Passport size photographs"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-004",
+    "sourceSystem": "CuratedSeed",
+    "title": "Soil Health Card Scheme",
+    "shortDescription": "Provides farmers with information on nutrient status of their soil and recommendations on appropriate dosage of nutrients.",
+    "description": "The scheme aims to promote soil test-based nutrient management. Soil Health Cards are issued to farmers carrying crop-wise recommendations of nutrients and fertilizers required for the individual farms. This helps farmers improve productivity through judicious use of inputs.",
+    "benefits": "Provides a printed report (card) detailing the health of the farmer's soil. Helps reduce the cost of cultivation by applying only necessary fertilizers and improves overall crop yield.",
+    "applicationUrl": "https://soilhealth.dac.gov.in/",
+    "sourceUrl": "https://soilhealth.dac.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Sustainable Farming",
+      "Testing"
+    ],
+    "governmentLevel": "JOINT",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "State Government officials collect soil samples and send them to testing laboratories. The resulting Soil Health Cards are distributed to the farmers periodically. Farmers can also track their card status online.",
+    "faq": [
+      {
+        "question": "How often is a Soil Health Card issued?",
+        "answer": "It is generally provided to all farmers at an interval of 2 years."
+      },
+      {
+        "question": "Does the farmer have to pay for the soil test?",
+        "answer": "No, the cost of soil sampling, testing, and generation of the card is entirely funded by the government."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Land details (Khasra/Khatauni)"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-005",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan (PM-KUSUM)",
+    "shortDescription": "Promotes solar energy usage among farmers by providing subsidies for solar pumps and grid-connected solar power plants.",
+    "description": "PM-KUSUM aims to ensure energy security for farmers in India, along with honoring India's commitment to increase the share of installed capacity of electric power from non-fossil-fuel sources. It provides subsidies to farmers for installing standalone solar agriculture pumps and for solarizing existing grid-connected agriculture pumps.",
+    "benefits": "Up to 60% subsidy (30% Central, 30% State) on the cost of standalone solar pumps. Allows farmers to sell surplus solar power back to the grid for additional income.",
+    "applicationUrl": "https://pmkusum.mnre.gov.in/",
+    "sourceUrl": "https://pmkusum.mnre.gov.in/",
+    "ministry": "Ministry of New and Renewable Energy",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Renewable Energy",
+      "Subsidy"
+    ],
+    "governmentLevel": "JOINT",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers can apply through the official state nodal agencies' portals or the national PM-KUSUM portal. Applications are processed at the state level.",
+    "faq": [
+      {
+        "question": "Can I install a solar pump if I already have a diesel pump?",
+        "answer": "Yes, Component-B of the scheme specifically supports the replacement of existing diesel agriculture pumps with solar agriculture pumps."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      },
+      {
+        "attribute": "landOwnership",
+        "operator": "==",
+        "value": "Yes"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Land Ownership Documents",
+      "Bank Details",
+      "Existing electricity connection details (if applicable)"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-006",
+    "sourceSystem": "CuratedSeed",
+    "title": "National Agriculture Market (e-NAM)",
+    "shortDescription": "Pan-India electronic trading portal networking the existing APMC mandis to create a unified national market for agricultural commodities.",
+    "description": "e-NAM is an online trading platform for agricultural commodities in India. The portal facilitates farmers, traders, and buyers with online trading in commodities to ensure better price discovery through a transparent auction process based on the quality of produce.",
+    "benefits": "Provides farmers with better price realization for their produce, transparent weighing, and online payment directly into their bank accounts. Removes information asymmetry between buyers and sellers.",
+    "applicationUrl": "https://enam.gov.in/",
+    "sourceUrl": "https://enam.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Market",
+      "Digital India"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers can register directly through the e-NAM portal or mobile app by providing basic details, bank account info, and Aadhaar. Registration can also be done at the mandi gate.",
+    "faq": [
+      {
+        "question": "Are there any fees to register on e-NAM?",
+        "answer": "No, registration for farmers on the e-NAM portal is completely free of cost."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Bank Passbook (for payment routing)"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-007",
+    "sourceSystem": "CuratedSeed",
+    "title": "Agriculture Infrastructure Fund (AIF)",
+    "shortDescription": "Provides medium to long term debt financing facility for investment in viable projects for post-harvest management infrastructure.",
+    "description": "The Agriculture Infrastructure Fund is a Central Sector Scheme providing a medium - long term debt financing facility for investment in viable projects for post-harvest management Infrastructure and community farming assets through interest subvention and financial support.",
+    "benefits": "All loans under this financing facility will have interest subvention of 3% per annum up to a limit of Rs. 2 crore. This subvention will be available for a maximum period of 7 years. Credit guarantee coverage is also provided.",
+    "applicationUrl": "https://agriinfra.dac.gov.in/",
+    "sourceUrl": "https://agriinfra.dac.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Infrastructure",
+      "Credit"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Beneficiaries must register on the AIF portal, prepare a Detailed Project Report (DPR), and submit loan applications to participating lending institutions.",
+    "faq": [
+      {
+        "question": "Who can apply for AIF?",
+        "answer": "Farmers, FPOs, PACS, Agri-entrepreneurs, Startups, and State Agencies."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "IN",
+        "value": "Farmer,FPO,Agri-entrepreneur"
+      }
+    ],
+    "requiredDocuments": [
+      "Detailed Project Report (DPR)",
+      "Bank Loan Application Form",
+      "KYC Documents",
+      "Land Ownership Documents (for infrastructure site)"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-008",
+    "sourceSystem": "CuratedSeed",
+    "title": "Raitha Siri (Karnataka)",
+    "shortDescription": "Promotes millet farming by providing financial assistance to farmers growing minor millets in Karnataka.",
+    "description": "The Raitha Siri scheme by the Government of Karnataka encourages farmers to cultivate Siri Dhanya (minor millets) such as Foxtail millet, Little millet, Kodo millet, Proso millet, Brown top millet, and Barnyard millet. It aims to increase the area under millet cultivation and improve nutritional security.",
+    "benefits": "Financial assistance of Rs. 10,000 per hectare is provided to farmers growing minor millets. The amount is directly transferred to the farmer's bank account through Direct Benefit Transfer (DBT).",
+    "applicationUrl": "https://kisanmitra.karnataka.gov.in/",
+    "sourceUrl": "https://raitamitra.karnataka.gov.in/",
+    "ministry": "Department of Agriculture, Karnataka",
+    "state": "Karnataka",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "State Scheme",
+      "Subsidy"
+    ],
+    "governmentLevel": "STATE",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers can apply online through the Karnataka Raita Mitra portal or by submitting an application to the nearest Raitha Samparka Kendra (RSK) along with crop sowing certificates.",
+    "faq": [
+      {
+        "question": "Is major millet (Ragi/Jowar) covered under this scheme?",
+        "answer": "No, the scheme specifically targets minor millets (Siri Dhanya) to encourage their cultivation."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "state",
+        "operator": "==",
+        "value": "Karnataka"
+      },
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "RTC / Pahani (Land Record)",
+      "Bank Passbook",
+      "Crop Sowing Certificate"
+    ]
+  },
+  {
+    "externalId": "SEED-FARMER-009",
+    "sourceSystem": "CuratedSeed",
+    "title": "National Mission on Natural Farming (NMNF)",
+    "shortDescription": "Promotes chemical-free farming systems relying on biomass recycling and cow-based formulations.",
+    "description": "NMNF aims to promote natural farming by motivating farmers to adopt chemical-free agricultural practices. It focuses on utilizing on-farm biomass, cow dung, and urine formulations (like Jeevamrutha) to restore soil health, increase biodiversity, and reduce input costs for farmers.",
+    "benefits": "Provides capacity building, training, and financial assistance of Rs. 15,000 per hectare for 3 years to farmers for cluster formation, capacity building, and transition to natural farming.",
+    "applicationUrl": "https://naturalfarming.dac.gov.in/",
+    "sourceUrl": "https://naturalfarming.dac.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Sustainable Farming",
+      "Training"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers must form clusters of 50 hectares or more and apply through the State Department of Agriculture or ATMA (Agricultural Technology Management Agency) to receive training and subsidies.",
+    "faq": [
+      {
+        "question": "Is organic farming the same as natural farming under this scheme?",
+        "answer": "While similar, NMNF focuses strictly on zero-budget inputs sourced directly from the farm, avoiding commercially purchased organic fertilizers."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Land Records",
+      "Cluster membership declaration"
+    ]
+  },
+  {
+    "externalId": "SEED-STUDENT-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Central Sector Scheme of Scholarship for College and University Students",
+    "shortDescription": "Financial assistance to meritorious students from low-income families to meet their day-to-day expenses while pursuing higher studies.",
+    "description": "This scheme provides scholarships to meritorious students who fall within the top 20th percentile of successful candidates in the Class XII Examination of their respective Boards. It aims to support students from low-income families pursuing regular courses at recognized educational institutions. The scholarship is awarded on the basis of results in the Senior Secondary Examination.",
+    "benefits": "Rs. 12,000 per annum at Graduation level for first three years of College and University courses, and Rs. 20,000 per annum at Post-Graduation level.",
+    "applicationUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://scholarships.gov.in/",
+    "ministry": "Ministry of Education",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Scholarship",
+      "Higher Education",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible students must apply online through the National Scholarship Portal (NSP). Applications must be verified by the respective institutions and State Education Boards.",
+    "faq": [
+      {
+        "question": "Can I receive this scholarship along with another scholarship?",
+        "answer": "No, a student receiving this scholarship cannot avail any other scholarship from the Central or State Government."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "attribute": "income",
+        "operator": "<=",
+        "value": "450000"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Class 12th Marksheet",
+      "Bank account details"
+    ]
+  },
+  {
+    "externalId": "SEED-STUDENT-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "AICTE - Pragati Scholarship Scheme for Girl Students (Degree/Diploma)",
+    "shortDescription": "Financial assistance for the advancement of girls pursuing technical education.",
+    "description": "The Pragati Scholarship aims to provide assistance for the advancement of girls pursuing technical education (Degree or Diploma). It empowers women by ensuring they have the financial backing necessary to pursue successful careers in technical fields.",
+    "benefits": "Rs. 50,000 per annum for every year of study as a lump sum amount towards payment of college fees, purchase of computers, books, and equipment.",
+    "applicationUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://www.aicte-india.org/schemes/students-development-schemes/Pragati",
+    "ministry": "All India Council for Technical Education (AICTE)",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Scholarship",
+      "Technical Education",
+      "Women"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Applications are invited online through the National Scholarship Portal (NSP) once a year. The respective AICTE approved institution verifies the application online.",
+    "faq": [
+      {
+        "question": "How many girls per family can apply?",
+        "answer": "Maximum two girl children per family are eligible for the scholarship."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "attribute": "income",
+        "operator": "<=",
+        "value": "800000"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Admission letter issued by Directorate of Technical Education",
+      "Tuition fee receipt"
+    ]
+  },
+  {
+    "externalId": "SEED-STUDENT-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "AICTE - Saksham Scholarship Scheme for Specially Abled Students",
+    "shortDescription": "Encouragement and support for specially abled children to pursue technical education.",
+    "description": "The Saksham Scholarship promotes and supports specially abled children who wish to pursue technical education (Degree or Diploma). It ensures that financial constraints do not hinder students with disabilities from achieving their educational and career aspirations.",
+    "benefits": "Rs. 50,000 per annum for every year of study as a lump sum amount towards payment of college fees, purchase of specialized software, equipment, or vehicles.",
+    "applicationUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://www.aicte-india.org/schemes/students-development-schemes/Saksham",
+    "ministry": "All India Council for Technical Education (AICTE)",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Scholarship",
+      "Disability Support",
+      "Technical Education"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible candidates apply online via the National Scholarship Portal (NSP). The AICTE approved host institution must verify the application details.",
+    "faq": [
+      {
+        "question": "What is the minimum disability percentage required?",
+        "answer": "The student must have a disability of not less than 40%."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "attribute": "income",
+        "operator": "<=",
+        "value": "800000"
+      },
+      {
+        "attribute": "disability",
+        "operator": "==",
+        "value": "Yes"
+      }
+    ],
+    "requiredDocuments": [
+      "Disability Certificate issued by a competent authority",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Admission letter"
+    ]
+  },
+  {
+    "externalId": "SEED-STUDENT-004",
+    "sourceSystem": "CuratedSeed",
+    "title": "PM Vidyalaxmi Scheme",
+    "shortDescription": "A unified portal providing a single window for students to access information and apply for educational loans.",
+    "description": "PM Vidyalaxmi is a first-of-its-kind portal for students seeking educational loans. Developed under the guidance of the Department of Financial Services (DFS) and the Ministry of Education, it integrates multiple banks and loan schemes into a single platform, ensuring no student is deprived of higher education due to lack of funds. It provides collateral-free, guarantor-free loans.",
+    "benefits": "Provides collateral-free, guarantor-free education loans up to Rs. 7.5 lakh. Offers 3% interest subvention for students with family income up to Rs. 8 lakh per annum.",
+    "applicationUrl": "https://www.vidyalakshmi.co.in/",
+    "sourceUrl": "https://www.vidyalakshmi.co.in/",
+    "ministry": "Ministry of Education / Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Education Loan",
+      "Higher Education",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Students register on the Vidyalaxmi portal, fill out a single Common Educational Loan Application Form (CELAF), and apply to multiple banks and loan schemes simultaneously.",
+    "faq": [
+      {
+        "question": "Is collateral required for loans under Vidyalaxmi?",
+        "answer": "No, loans up to Rs. 7.5 lakh are collateral-free and guarantor-free."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      }
+    ],
+    "requiredDocuments": [
+      "Admission confirmation letter",
+      "Fee structure document",
+      "Aadhaar Card",
+      "PAN Card of student and co-borrower",
+      "Income proof of co-borrower"
+    ]
+  },
+  {
+    "externalId": "SEED-STUDENT-005",
+    "sourceSystem": "CuratedSeed",
+    "title": "Post Matric Scholarship for SC/ST Students",
+    "shortDescription": "Financial assistance to Scheduled Caste and Scheduled Tribe students studying at post matriculation or post-secondary stage.",
+    "description": "This scheme provides financial assistance to SC and ST students to enable them to complete their education. It covers students studying in recognized institutions from Class 11 up to Post-Graduation. The objective is to appreciably increase the Gross Enrolment Ratio of SC/ST students in higher education.",
+    "benefits": "Covers compulsory non-refundable fees (including tuition fee) and provides a monthly maintenance allowance depending on the course of study.",
+    "applicationUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://socialjustice.gov.in/",
+    "ministry": "Ministry of Social Justice and Empowerment / Ministry of Tribal Affairs",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Scholarship",
+      "SC/ST",
+      "Social Welfare"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Students must apply online on the National Scholarship Portal (NSP) or their respective State Scholarship Portals. Direct Benefit Transfer (DBT) is used to disburse the funds directly to the student's Aadhaar-seeded bank account.",
+    "faq": [
+      {
+        "question": "Is there an income limit for this scholarship?",
+        "answer": "Yes, the total family income from all sources should not exceed Rs. 2.50 lakh per annum."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "attribute": "category",
+        "operator": "IN",
+        "value": "SC,ST"
+      },
+      {
+        "attribute": "income",
+        "operator": "<=",
+        "value": "250000"
+      }
+    ],
+    "requiredDocuments": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Previous year's mark sheet",
+      "Fee receipt of current course year",
+      "Aadhaar Card"
+    ]
+  },
+  {
+    "externalId": "SEED-STUDENT-006",
+    "sourceSystem": "CuratedSeed",
+    "title": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+    "shortDescription": "Awards scholarships to meritorious students of economically weaker sections to arrest their drop out at class VIII.",
+    "description": "NMMSS aims to award scholarships to meritorious students from economically weaker sections to prevent them from dropping out of school at Class 8 and encourage them to continue their studies at the secondary stage. Scholarships are disbursed directly into the bank accounts of selected students.",
+    "benefits": "A scholarship of Rs. 12,000 per annum (Rs. 1,000 per month) is awarded to selected students from Class IX to Class XII.",
+    "applicationUrl": "https://scholarships.gov.in/",
+    "sourceUrl": "https://dsel.education.gov.in/scheme/nmmss",
+    "ministry": "Ministry of Education",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Scholarship",
+      "School Education",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Selection is made through an examination conducted by State Governments/UT Administrations. Selected candidates must apply on the National Scholarship Portal (NSP) for disbursement.",
+    "faq": [
+      {
+        "question": "Who can appear for the selection exam?",
+        "answer": "Students studying in Class 8 in Government, Government-aided, and local body schools with at least 55% marks in Class 7 (relaxable by 5% for SC/ST)."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "attribute": "income",
+        "operator": "<=",
+        "value": "350000"
+      }
+    ],
+    "requiredDocuments": [
+      "Income Certificate",
+      "Class 7th Marksheet",
+      "Caste Certificate (if applicable)",
+      "Aadhaar Card"
+    ]
+  },
+  {
+    "externalId": "SEED-WOMEN-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Sukanya Samriddhi Yojana (SSY)",
+    "shortDescription": "A small savings scheme backed by the Government of India targeted at the parents of girl children to build a fund for their future education and marriage.",
+    "description": "Launched as part of the 'Beti Bachao, Beti Padhao' campaign, the Sukanya Samriddhi Yojana is a deposit scheme designed to ensure a bright future for girl children in India. It offers a highly attractive interest rate and substantial tax benefits under Section 80C. The account matures 21 years after the date of opening.",
+    "benefits": "Provides an attractive interest rate (currently around 8.2% p.a., subject to quarterly revision) which is fully exempt from tax. Deposits are eligible for deduction under Section 80C up to Rs. 1.5 lakh.",
+    "applicationUrl": "https://www.indiapost.gov.in/Financial/Pages/Content/Post-Office-Saving-Schemes.aspx",
+    "sourceUrl": "https://www.nsiindia.gov.in/",
+    "ministry": "Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Savings",
+      "Child Welfare",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Parents or legal guardians can open an SSY account in any post office or authorized commercial bank branch by submitting the account opening form along with the required documents.",
+    "faq": [
+      {
+        "question": "What is the age limit for opening the account?",
+        "answer": "The account can be opened in the name of a girl child anytime before she attains the age of 10 years."
+      },
+      {
+        "question": "Can I withdraw money for the child's education before maturity?",
+        "answer": "Yes, a partial withdrawal of up to 50% of the balance is allowed after the girl reaches 18 years of age or passes the 10th standard, exclusively for higher education expenses."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "attribute": "age",
+        "operator": "<=",
+        "value": "10"
+      }
+    ],
+    "requiredDocuments": [
+      "Birth Certificate of the girl child",
+      "Identity Proof of the parent/guardian",
+      "Address Proof of the parent/guardian"
+    ]
+  },
+  {
+    "externalId": "SEED-WOMEN-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "shortDescription": "Provides clean cooking fuel (LPG) to poor households, protecting the health of women and children.",
+    "description": "PMUY aims to safeguard the health of women and children by providing them with a clean cooking fuel (LPG). It ensures that they don't have to compromise their health in smoky kitchens or wander in unsafe areas collecting firewood. The scheme provides a deposit-free LPG connection in the name of an adult woman of a BPL family.",
+    "benefits": "Provides financial support of Rs. 1600 for a 14.2 kg cylinder (or Rs. 1150 for a 5 kg cylinder) which covers the security deposit, pressure regulator, LPG hose, and installation charges. Beneficiaries also receive a targeted subsidy per cylinder.",
+    "applicationUrl": "https://www.pmuy.gov.in/",
+    "sourceUrl": "https://www.pmuy.gov.in/",
+    "ministry": "Ministry of Petroleum and Natural Gas",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Health",
+      "Subsidy",
+      "Energy"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible women can apply by filling out the application form available at LPG distributor agencies or submitting it online via the PMUY portal.",
+    "faq": [
+      {
+        "question": "Can any woman apply for PMUY?",
+        "answer": "The applicant must be a woman above 18 years of age, belonging to a BPL household, SC/ST, PMAY(G), AAY, or other specified weaker sections."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card of applicant and all adult family members",
+      "Ration Card or document identifying family composition",
+      "Bank Account Details",
+      "Passport size photograph"
+    ]
+  },
+  {
+    "externalId": "SEED-WOMEN-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "Lakhpati Didi Scheme",
+    "shortDescription": "Aims to empower rural women by helping them earn a sustainable income of at least Rs. 1 Lakh per annum per household.",
+    "description": "The Lakhpati Didi initiative, driven by the Deendayal Antyodaya Yojana - National Rural Livelihoods Mission (DAY-NRLM), aims to catalyze economic empowerment for women in Self-Help Groups (SHGs). It focuses on diversifying livelihood activities, providing skill training, and ensuring credit linkage so that every SHG woman can earn a sustainable income of Rs. 1 Lakh or more annually.",
+    "benefits": "Provides capacity building, micro-credit support, and specialized skill training in areas like drone operation, LED bulb making, plumbing, and agriculture. Facilitates market linkages for products manufactured by women.",
+    "applicationUrl": "https://lakhpatididi.gov.in/",
+    "sourceUrl": "https://nrlm.gov.in/",
+    "ministry": "Ministry of Rural Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Employment",
+      "Skill Development",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Women must be members of registered Self-Help Groups (SHGs) under DAY-NRLM. Local block-level mission management units identify and prepare livelihood plans for these women.",
+    "faq": [
+      {
+        "question": "Is this a direct cash transfer scheme?",
+        "answer": "No, it is a livelihood enablement scheme that provides training, mentorship, and credit to help women start or scale micro-enterprises to earn 1 lakh per annum."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "SHG Member"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "SHG Membership proof",
+      "Bank Account details"
+    ]
+  },
+  {
+    "externalId": "SEED-WOMEN-004",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    "shortDescription": "A maternity benefit program providing conditional cash transfer to pregnant women and lactating mothers.",
+    "description": "PMMVY is a direct benefit transfer scheme that compensates for partial wage loss, enabling women to take adequate rest before and after delivery of their first living child. It also aims to improve the health-seeking behavior of pregnant women and lactating mothers by providing cash incentives tied to specific health conditions.",
+    "benefits": "Cash incentive of Rs. 5,000 paid in three installments directly into the bank account upon early registration of pregnancy, antenatal check-up, and registration of the child's birth and completion of the first cycle of vaccination.",
+    "applicationUrl": "https://pmmvy.wcd.gov.in/",
+    "sourceUrl": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana",
+    "ministry": "Ministry of Women and Child Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Health",
+      "Maternity Benefit",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible women can apply by submitting the prescribed forms at their local Anganwadi Centre (AWC) or approved Health facility, or by applying online through the PMMVY CAS portal.",
+    "faq": [
+      {
+        "question": "Are government employees eligible for PMMVY?",
+        "answer": "No, women who are in regular employment with the Central Government, State Governments, or PSUs, or who are in receipt of similar benefits under any law, are excluded."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Mother and Child Protection (MCP) Card",
+      "Bank or Post Office Account details",
+      "Child's Birth Certificate (for 3rd installment)"
+    ]
+  },
+  {
+    "externalId": "SEED-WOMEN-005",
+    "sourceSystem": "CuratedSeed",
+    "title": "Beti Bachao Beti Padhao (BBBP)",
+    "shortDescription": "A national initiative to address the declining Child Sex Ratio (CSR) and empower girl children.",
+    "description": "Beti Bachao Beti Padhao is a joint initiative of the Ministry of Women and Child Development, Ministry of Health and Family Welfare, and Ministry of Education. It aims to prevent gender-biased sex selective elimination, ensure the survival and protection of the girl child, and ensure the education and participation of the girl child.",
+    "benefits": "It is not a Direct Benefit Transfer (DBT) scheme. It provides community-level awareness, strict enforcement of the PC&PNDT Act, and promotes girls' education through improved school infrastructure and gender-sensitive curricula.",
+    "applicationUrl": "https://wcd.nic.in/bbbp-schemes",
+    "sourceUrl": "https://wcd.nic.in/bbbp-schemes",
+    "ministry": "Ministry of Women and Child Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Child Welfare",
+      "Education",
+      "Social Welfare"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "As this is an awareness and structural enforcement scheme, individual applications for cash benefits are not applicable. Citizens participate by reporting PC&PNDT violations and utilizing educational resources.",
+    "faq": [
+      {
+        "question": "Does BBBP provide any cash incentive for the birth of a girl child?",
+        "answer": "No, BBBP has no provision for individual cash transfers. It focuses on awareness and systemic improvements."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      }
+    ],
+    "requiredDocuments": []
+  },
+  {
+    "externalId": "SEED-WOMEN-006",
+    "sourceSystem": "CuratedSeed",
+    "title": "Mission Shakti - Nari Adalat",
+    "shortDescription": "Provides women with an alternate dispute resolution mechanism at the village level for issues like domestic violence and property rights.",
+    "description": "Nari Adalat is a component under the Sambal sub-scheme of Mission Shakti. It operates as an alternate grievance redressal mechanism exclusively for women at the Gram Panchayat level. It aims to provide speedy, accessible, and affordable justice to women facing domestic violence, dowry harassment, or property disputes, led by trained community women.",
+    "benefits": "Offers free, accessible legal counseling, mediation, and dispute resolution services at the grassroots level, empowering women to seek justice without the heavy financial burden of formal courts.",
+    "applicationUrl": "https://wcd.nic.in/schemes/mission-shakti",
+    "sourceUrl": "https://wcd.nic.in/schemes/mission-shakti",
+    "ministry": "Ministry of Women and Child Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Legal Support",
+      "Social Welfare",
+      "Empowerment"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Women can approach the local Nari Adalat established at their Gram Panchayat level directly. Cases are registered and mediated locally by the selected Nyaya Sakhis.",
+    "faq": [
+      {
+        "question": "Is the decision of Nari Adalat legally binding like a court order?",
+        "answer": "No, it functions primarily as a mediation and alternate dispute resolution body. However, it can guide women to formal legal channels if mediation fails."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "==",
+        "value": "Female"
+      }
+    ],
+    "requiredDocuments": [
+      "Any supporting documents regarding the dispute (if available)"
+    ]
+  },
+  {
+    "externalId": "SEED-EMP-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)",
+    "shortDescription": "Provides at least 100 days of guaranteed wage employment in a financial year to every rural household.",
+    "description": "MGNREGA is one of the largest work guarantee programmes in the world. It aims to enhance livelihood security in rural areas by providing at least 100 days of guaranteed wage employment in a financial year to every household whose adult members volunteer to do unskilled manual work.",
+    "benefits": "Guaranteed 100 days of wage employment per year. If work is not provided within 15 days of demanding it, an unemployment allowance is given.",
+    "applicationUrl": "https://nrega.nic.in/",
+    "sourceUrl": "https://nrega.nic.in/",
+    "ministry": "Ministry of Rural Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Employment & Skill Development",
+    "secondaryCategories": [
+      "Rural Development",
+      "Wage Employment",
+      "Social Welfare"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Adult members of rural households submit their name, age, and address to the Gram Panchayat. The Gram Panchayat registers households and issues a Job Card, which is essential to demand work.",
+    "faq": [
+      {
+        "question": "What happens if work is not provided within 15 days?",
+        "answer": "The applicant is entitled to a daily unemployment allowance, which is paid by the State Government."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "residence",
+        "operator": "==",
+        "value": "Rural"
+      },
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Voter ID / Ration Card",
+      "Bank Account details",
+      "Passport size photographs"
+    ]
+  },
+  {
+    "externalId": "SEED-EMP-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+    "shortDescription": "A skill development scheme to enable Indian youth to take up industry-relevant skill training.",
+    "description": "PMKVY is the flagship scheme of the Ministry of Skill Development & Entrepreneurship (MSDE). The objective of this Skill Certification Scheme is to enable a large number of Indian youth to take up industry-relevant skill training that will help them in securing a better livelihood.",
+    "benefits": "Provides free skill training in various industry-relevant sectors. Also provides placement assistance and a recognized certificate upon successful completion.",
+    "applicationUrl": "https://www.pmkvyofficial.org/",
+    "sourceUrl": "https://www.pmkvyofficial.org/",
+    "ministry": "Ministry of Skill Development and Entrepreneurship",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Employment & Skill Development",
+    "secondaryCategories": [
+      "Skill Training",
+      "Youth",
+      "Employment"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Candidates can enroll via the Skill India Digital portal or visit an authorized PMKVY training center for counseling and enrollment.",
+    "faq": [
+      {
+        "question": "Do I have to pay any fee for the training?",
+        "answer": "No, the entire cost of training and assessment is paid by the Government of India."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "IN",
+        "value": "Unemployed,School Dropout,College Dropout"
+      },
+      {
+        "attribute": "nationality",
+        "operator": "==",
+        "value": "Indian"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Bank Account details",
+      "Education certificates"
+    ]
+  },
+  {
+    "externalId": "SEED-MSME-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Mudra Yojana (PMMY)",
+    "shortDescription": "Provides loans up to Rs. 10 Lakhs to non-corporate, non-farm small/micro enterprises.",
+    "description": "MUDRA stands for Micro Units Development & Refinance Agency Ltd. The PMMY scheme provides financing support to micro business units. The loans are classified into three categories: Shishu (up to Rs. 50,000), Kishore (Rs. 50,000 to Rs. 5 lakh), and Tarun (Rs. 5 lakh to Rs. 10 lakh).",
+    "benefits": "Collateral-free loans up to Rs. 10 Lakhs for setting up new enterprises or expanding existing ones in manufacturing, trading, or service sectors.",
+    "applicationUrl": "https://www.mudra.org.in/",
+    "sourceUrl": "https://www.mudra.org.in/",
+    "ministry": "Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "MSME & Entrepreneurship",
+    "secondaryCategories": [
+      "Business Loan",
+      "Credit",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Borrowers can approach any commercial bank, RRB, small finance bank, cooperative bank, MFI, or NBFC, or apply online through the Udyamimitra portal.",
+    "faq": [
+      {
+        "question": "Is collateral required for Mudra loans?",
+        "answer": "No, loans up to Rs. 10 Lakh under PMMY are entirely collateral-free."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "businessType",
+        "operator": "IN",
+        "value": "Non-Corporate,Non-Farm,Micro Enterprise"
+      }
+    ],
+    "requiredDocuments": [
+      "Identity Proof (Aadhaar, PAN)",
+      "Address Proof",
+      "Business Plan/Project Report",
+      "Quotation of machinery/items to be purchased"
+    ]
+  },
+  {
+    "externalId": "SEED-MSME-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "PM Vishwakarma Yojana",
+    "shortDescription": "Provides end-to-end holistic support to traditional artisans and craftspeople scaling their business.",
+    "description": "PM Vishwakarma is a new Central Sector Scheme aimed at supporting traditional artisans and craftspeople of rural and urban India. It offers recognition, skill upgradation, toolkit incentives, credit support, incentive for digital transactions, and marketing support.",
+    "benefits": "Provides a PM Vishwakarma Certificate & ID card, toolkit incentive of Rs. 15,000, collateral-free credit support up to Rs. 3 lakh (in two tranches) at a concessional interest rate of 5%, and a stipend during skill training.",
+    "applicationUrl": "https://pmvishwakarma.gov.in/",
+    "sourceUrl": "https://pmvishwakarma.gov.in/",
+    "ministry": "Ministry of Micro, Small and Medium Enterprises",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "MSME & Entrepreneurship",
+    "secondaryCategories": [
+      "Artisans",
+      "Skill Development",
+      "Credit"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Artisans must register on the PM Vishwakarma portal through Common Service Centres (CSCs). Verification is done via a three-tier process by the Gram Panchayat, District Implementation Committee, and State Committee.",
+    "faq": [
+      {
+        "question": "Are all artisans covered?",
+        "answer": "The scheme initially covers 18 traditional trades such as Carpenter, Boat Maker, Blacksmith, Potter, Sculptor, Cobbler, Tailor, Washerman, etc."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Traditional Artisan/Craftsperson"
+      },
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Mobile Number",
+      "Bank Account details",
+      "Ration Card"
+    ]
+  },
+  {
+    "externalId": "SEED-MSME-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "Stand-Up India Scheme",
+    "shortDescription": "Facilitates bank loans between Rs. 10 lakh and Rs. 1 Crore to at least one SC/ST borrower and at least one woman borrower per bank branch.",
+    "description": "The objective of the Stand-Up India scheme is to facilitate bank loans between Rs. 10 lakh and Rs. 1 Crore to at least one Scheduled Caste (SC) or Scheduled Tribe (ST) borrower and at least one woman borrower per bank branch for setting up a greenfield (new) enterprise.",
+    "benefits": "Facilitates substantial credit (Rs. 10 Lakh to Rs. 1 Crore) for new enterprises in manufacturing, services, agri-allied activities, or the trading sector.",
+    "applicationUrl": "https://www.standupmitra.in/",
+    "sourceUrl": "https://www.standupmitra.in/",
+    "ministry": "Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "MSME & Entrepreneurship",
+    "secondaryCategories": [
+      "Women Empowerment",
+      "SC/ST",
+      "Credit",
+      "Business Loan"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Applications can be made directly at a bank branch, through the Stand-Up India portal online, or through the Lead District Manager.",
+    "faq": [
+      {
+        "question": "Can an existing business apply for this loan?",
+        "answer": "No, the loan is strictly for setting up a new 'greenfield' enterprise."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "category",
+        "operator": "IN",
+        "value": "SC,ST,Women"
+      },
+      {
+        "attribute": "businessStage",
+        "operator": "==",
+        "value": "Greenfield"
+      }
+    ],
+    "requiredDocuments": [
+      "Identity and Address Proof",
+      "Caste Certificate (if applicable)",
+      "Project Report",
+      "Clearance from pollution control board (if necessary)"
+    ]
+  },
+  {
+    "externalId": "SEED-MSME-004",
+    "sourceSystem": "CuratedSeed",
+    "title": "Startup India Seed Fund Scheme (SISFS)",
+    "shortDescription": "Provides financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialization.",
+    "description": "SISFS aims to provide financial assistance to startups to support them in their early stages. This enables startups to graduate to a level where they will be able to raise investments from angel investors or venture capitalists, or seek loans from commercial banks.",
+    "benefits": "Up to Rs. 20 Lakhs as grant for validation of Proof of Concept, or up to Rs. 50 Lakhs of investment for market entry, commercialization, or scaling up.",
+    "applicationUrl": "https://seedfund.startupindia.gov.in/",
+    "sourceUrl": "https://seedfund.startupindia.gov.in/",
+    "ministry": "Department for Promotion of Industry and Internal Trade (DPIIT)",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "MSME & Entrepreneurship",
+    "secondaryCategories": [
+      "Startup",
+      "Seed Fund",
+      "Innovation"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Startups must apply online on the Startup India Seed Fund portal. The application is evaluated by an incubator-level Seed Management Committee (ISMC).",
+    "faq": [
+      {
+        "question": "Is DPIIT recognition mandatory?",
+        "answer": "Yes, a startup must be recognized by DPIIT and incorporated not more than 2 years ago at the time of application."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "recognition",
+        "operator": "==",
+        "value": "DPIIT Recognized Startup"
+      },
+      {
+        "attribute": "ageOfCompany",
+        "operator": "<=",
+        "value": "2 years"
+      }
+    ],
+    "requiredDocuments": [
+      "Certificate of Incorporation",
+      "DPIIT Recognition Certificate",
+      "Pitch Deck / Business Plan",
+      "Details of core team"
+    ]
+  },
+  {
+    "externalId": "SEED-EMP-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "Prime Minister's Employment Generation Programme (PMEGP)",
+    "shortDescription": "A credit-linked subsidy program to generate employment opportunities by setting up micro-enterprises in rural and urban areas.",
+    "description": "PMEGP is a major credit-linked subsidy programme implemented by Khadi and Village Industries Commission (KVIC). It aims to generate self-employment opportunities through the establishment of micro-enterprises in the non-farm sector. It brings together widely dispersed traditional artisans and unemployed youth to provide them self-employment opportunities.",
+    "benefits": "Maximum project cost of Rs. 50 lakh in the manufacturing sector and Rs. 20 lakh in the service sector. Provides a government subsidy ranging from 15% to 35% of the project cost depending on the applicant's category and location.",
+    "applicationUrl": "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp",
+    "sourceUrl": "https://msme.gov.in/",
+    "ministry": "Ministry of Micro, Small and Medium Enterprises",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Employment & Skill Development",
+    "secondaryCategories": [
+      "Business Loan",
+      "Subsidy",
+      "MSME"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Applications are submitted online via the PMEGP e-Portal. Approved applications are forwarded to banks, and beneficiaries must undergo Entrepreneurship Development Programme (EDP) training before loan disbursement.",
+    "faq": [
+      {
+        "question": "What is the education requirement for higher project costs?",
+        "answer": "For manufacturing projects above Rs. 10 lakh and service projects above Rs. 5 lakh, the applicant must have passed at least VIII standard."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Project Report",
+      "Education/Skill Certificates",
+      "Category Certificate (if applicable)"
+    ]
+  },
+  {
+    "externalId": "SEED-MSME-005",
+    "sourceSystem": "CuratedSeed",
+    "title": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+    "shortDescription": "Provides guarantee cover for collateral-free credit facilities extended by lending institutions to Micro and Small Enterprises (MSEs).",
+    "description": "CGTMSE reassures lenders that in the event an MSE unit fails to discharge its liabilities, the Guarantee Trust would make good the loss incurred by the lender. This highly encourages banks to provide collateral-free loans to new and existing micro and small businesses.",
+    "benefits": "Enables MSEs to access collateral-free credit up to Rs. 500 lakh (Rs. 5 Crore) from eligible banks and financial institutions.",
+    "applicationUrl": "https://www.cgtmse.in/",
+    "sourceUrl": "https://www.cgtmse.in/",
+    "ministry": "Ministry of Micro, Small and Medium Enterprises",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "MSME & Entrepreneurship",
+    "secondaryCategories": [
+      "Credit Guarantee",
+      "Business Loan",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "The borrower directly approaches a bank for a collateral-free loan. Once the loan is sanctioned, the bank itself applies to CGTMSE for the guarantee cover.",
+    "faq": [
+      {
+        "question": "Can retail trade businesses apply for this?",
+        "answer": "Yes, Retail Trade is eligible for guarantee cover up to Rs. 100 Lakhs."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "businessType",
+        "operator": "IN",
+        "value": "Micro Enterprise,Small Enterprise"
+      }
+    ],
+    "requiredDocuments": [
+      "Udyam Registration Certificate",
+      "Project Report",
+      "Financial statements of the business"
+    ]
+  },
+  {
+    "externalId": "SEED-HEALTH-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+    "shortDescription": "The world's largest health insurance/assurance scheme providing health cover for secondary and tertiary care hospitalization.",
+    "description": "PM-JAY is a flagship scheme of the Government of India aiming to provide health cover of Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization. It targets poor, deprived rural families and identified occupational category of urban workers' families as per the latest Socio-Economic Caste Census (SECC) data.",
+    "benefits": "Provides cashless access to healthcare services. Covers up to Rs. 5,000,000 per family per year for medical treatment in empanelled public and private hospitals.",
+    "applicationUrl": "https://pmjay.gov.in/",
+    "sourceUrl": "https://nha.gov.in/PM-JAY",
+    "ministry": "Ministry of Health and Family Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Health & Healthcare",
+    "secondaryCategories": [
+      "Health Insurance",
+      "Social Welfare",
+      "Medical Treatment"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "There is no formal enrollment process. Eligible families are automatically covered based on SECC data. Beneficiaries must verify their eligibility at empanelled hospitals or CSCs using an identification document to get their e-card.",
+    "faq": [
+      {
+        "question": "Is there a cap on family size or age?",
+        "answer": "No, there is no restriction on family size, age, or gender."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "incomeStatus",
+        "operator": "IN",
+        "value": "BPL,SECC Identified"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card or Ration Card (for identity verification at the hospital)"
+    ]
+  },
+  {
+    "externalId": "SEED-HEALTH-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+    "shortDescription": "A campaign to provide quality medicines at affordable prices to the masses through special kendras.",
+    "description": "PMBJP is a campaign launched by the Department of Pharmaceuticals to provide quality generic medicines at affordable prices to the masses. The scheme operates through Pradhan Mantri Bhartiya Janaushadhi Kendras (PMBJK), which are special medical outlets opened across the country.",
+    "benefits": "Provides high-quality generic medicines at prices 50% to 90% lesser than the branded medicines available in the open market.",
+    "applicationUrl": "http://janaushadhi.gov.in/",
+    "sourceUrl": "http://janaushadhi.gov.in/",
+    "ministry": "Ministry of Chemicals and Fertilizers",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Health & Healthcare",
+    "secondaryCategories": [
+      "Generic Medicines",
+      "Public Health",
+      "Affordable Healthcare"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "No individual application is required to buy medicines. Citizens can simply visit the nearest PMBJP Kendra with a valid prescription.",
+    "faq": [
+      {
+        "question": "Are the generic medicines sold at PMBJP kendras safe?",
+        "answer": "Yes, all medicines procured are strictly tested at NABL accredited laboratories to ensure quality and efficacy."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "nationality",
+        "operator": "==",
+        "value": "Indian"
+      }
+    ],
+    "requiredDocuments": [
+      "Medical Prescription (for prescription drugs)"
+    ]
+  },
+  {
+    "externalId": "SEED-HOUSING-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Awas Yojana - Urban (PMAY-U)",
+    "shortDescription": "Aims to provide all-weather pucca houses to all eligible beneficiaries in the urban areas.",
+    "description": "PMAY-U addresses the urban housing shortage among the EWS/LIG and MIG categories, including slum dwellers, by ensuring a pucca house to all eligible urban households. It operates through various verticals like Beneficiary-led Construction (BLC), Affordable Housing in Partnership (AHP), and In-situ Slum Redevelopment (ISSR).",
+    "benefits": "Provides central assistance/subsidy (e.g., Rs. 1.5 Lakh per house under BLC) for the construction, acquisition, or enhancement of houses in urban areas.",
+    "applicationUrl": "https://pmaymis.gov.in/",
+    "sourceUrl": "https://mohua.gov.in/",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Housing",
+    "secondaryCategories": [
+      "Urban Development",
+      "Financial Assistance",
+      "Subsidized Housing"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible individuals can apply online on the PMAY-U MIS portal or through Common Service Centres (CSCs) or their respective Urban Local Bodies (ULBs).",
+    "faq": [
+      {
+        "question": "Can I apply if I already own a pucca house?",
+        "answer": "No, the beneficiary family should not own a pucca house in their name anywhere in India."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "residence",
+        "operator": "==",
+        "value": "Urban"
+      },
+      {
+        "attribute": "houseOwnership",
+        "operator": "==",
+        "value": "None"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Income Proof",
+      "Land ownership documents (for BLC vertical)"
+    ]
+  },
+  {
+    "externalId": "SEED-HOUSING-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+    "shortDescription": "Aims to provide a pucca house with basic amenities to all houseless households and households living in kutcha houses in rural areas.",
+    "description": "PMAY-G is a rural housing scheme aimed at achieving 'Housing for All'. Beneficiaries are identified using parameters from the SECC data, verified by the Gram Sabha. It focuses on the construction of disaster-resilient houses in rural areas.",
+    "benefits": "Provides financial assistance of Rs. 1.20 Lakh in plain areas and Rs. 1.30 Lakh in hilly, difficult, and IAP districts. Beneficiaries also receive 90/95 person-days of unskilled labor wages under MGNREGA.",
+    "applicationUrl": "https://pmayg.nic.in/",
+    "sourceUrl": "https://rural.nic.in/",
+    "ministry": "Ministry of Rural Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Housing",
+    "secondaryCategories": [
+      "Rural Development",
+      "Financial Assistance",
+      "Social Welfare"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Beneficiaries do not typically apply; they are selected based on SECC 2011 data and Gram Sabha verification. However, individuals missing from the list can approach the Gram Panchayat appellate committee.",
+    "faq": [
+      {
+        "question": "Is toilet construction included in PMAY-G?",
+        "answer": "Yes, an additional assistance of Rs. 12,000 is provided for the construction of toilets under Swachh Bharat Mission-Gramin."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "residence",
+        "operator": "==",
+        "value": "Rural"
+      },
+      {
+        "attribute": "houseOwnership",
+        "operator": "IN",
+        "value": "None,Kutcha House"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Job Card (MGNREGA)",
+      "Bank Account details",
+      "Swachh Bharat Mission (SBM) number"
+    ]
+  },
+  {
+    "externalId": "SEED-SOCIAL-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "Atal Pension Yojana (APY)",
+    "shortDescription": "A pension scheme focusing on workers in the unorganized sector to guarantee a minimum pension after the age of 60.",
+    "description": "APY was launched to create a universal social security system for all Indians, especially the poor, the under-privileged, and workers in the unorganized sector. Administered by the Pension Fund Regulatory and Development Authority (PFRDA).",
+    "benefits": "Subscribers receive a guaranteed minimum monthly pension of Rs. 1,000 to Rs. 5,000 (depending on contributions) starting at the age of 60. The spouse is also guaranteed the same pension after the subscriber's death.",
+    "applicationUrl": "https://www.npscra.nsdl.co.in/scheme-details.php",
+    "sourceUrl": "https://financialservices.gov.in/",
+    "ministry": "Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Senior Citizens & Social Welfare",
+    "secondaryCategories": [
+      "Pension",
+      "Social Security",
+      "Unorganized Sector"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Individuals can open an APY account by visiting their bank branch or post office where they hold a savings account, or via net banking.",
+    "faq": [
+      {
+        "question": "What is the age criteria for joining APY?",
+        "answer": "The minimum age of joining APY is 18 years and maximum age is 40 years."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "age",
+        "operator": "<=",
+        "value": "40"
+      }
+    ],
+    "requiredDocuments": [
+      "Bank Savings Account Details",
+      "Aadhaar Card"
+    ]
+  },
+  {
+    "externalId": "SEED-SOCIAL-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS)",
+    "shortDescription": "Provides a monthly pension to destitute elderly persons aged 60 years and above.",
+    "description": "IGNOAPS is a core component of the National Social Assistance Programme (NSAP). It provides financial assistance to senior citizens belonging to Below Poverty Line (BPL) households, ensuring they have basic financial support in their old age.",
+    "benefits": "Provides a central contribution of Rs. 200 per month for persons between 60-79 years, and Rs. 500 per month for persons aged 80 years and above. States usually add their own contribution, making the final pension amount higher.",
+    "applicationUrl": "https://nsap.nic.in/",
+    "sourceUrl": "https://nsap.nic.in/",
+    "ministry": "Ministry of Rural Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Senior Citizens & Social Welfare",
+    "secondaryCategories": [
+      "Pension",
+      "Senior Citizens",
+      "Social Security"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Applications are submitted to the local Gram Panchayat/Municipality. Verified applications are forwarded to the district administration, and the pension is disbursed directly to the beneficiary's bank account.",
+    "faq": [
+      {
+        "question": "Is the pension only for BPL families?",
+        "answer": "Yes, the applicant must belong to a household Below Poverty Line (BPL) according to the criteria prescribed by the Government of India."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "60"
+      },
+      {
+        "attribute": "incomeStatus",
+        "operator": "==",
+        "value": "BPL"
+      }
+    ],
+    "requiredDocuments": [
+      "Age Proof (Aadhaar/Voter ID)",
+      "BPL Card / Income Certificate",
+      "Bank/Post Office Account Details"
+    ]
+  },
+  {
+    "externalId": "SEED-SOCIAL-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "Indira Gandhi National Disability Pension Scheme (IGNDPS)",
+    "shortDescription": "Provides financial assistance to individuals with severe and multiple disabilities.",
+    "description": "Also a component of the National Social Assistance Programme (NSAP), IGNDPS aims to provide a monthly pension to BPL individuals living with severe or multiple disabilities, ensuring they receive basic social security and a life of dignity.",
+    "benefits": "Provides a central pension of Rs. 300 per month for disabled individuals up to the age of 79 years. For those aged 80 years and above, it increases to Rs. 500 per month (co-funded by State Governments).",
+    "applicationUrl": "https://nsap.nic.in/",
+    "sourceUrl": "https://nsap.nic.in/",
+    "ministry": "Ministry of Rural Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Senior Citizens & Social Welfare",
+    "secondaryCategories": [
+      "Disability Assistance",
+      "Pension",
+      "Social Security"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Applicants can apply at their local Gram Panchayat (rural) or Municipality (urban) along with the requisite disability certificates.",
+    "faq": [
+      {
+        "question": "What level of disability is required?",
+        "answer": "The applicant must have severe (80% or more) or multiple disabilities as defined under the Rights of Persons with Disabilities Act."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "disability",
+        "operator": "==",
+        "value": "Severe"
+      },
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "incomeStatus",
+        "operator": "==",
+        "value": "BPL"
+      }
+    ],
+    "requiredDocuments": [
+      "Disability Certificate (minimum 80%)",
+      "BPL Ration Card",
+      "Aadhaar Card",
+      "Bank Account details"
+    ]
+  },
+  {
+    "externalId": "SEED-SOCIAL-004",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+    "shortDescription": "A one-year renewable life insurance scheme offering coverage for death due to any reason.",
+    "description": "PMJJBY is a social security scheme aimed at bringing the unbanked and uninsured population into the financial mainstream. It provides life insurance cover for death due to any reason, making insurance affordable for the common citizen.",
+    "benefits": "Provides a life cover of Rs. 2 Lakhs in case of death of the insured due to any reason, at a highly subsidized premium of Rs. 436 per annum.",
+    "applicationUrl": "https://jansuraksha.gov.in/",
+    "sourceUrl": "https://financialservices.gov.in/",
+    "ministry": "Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Senior Citizens & Social Welfare",
+    "secondaryCategories": [
+      "Life Insurance",
+      "Social Security"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Individuals can enroll by filling an auto-debit consent form at their respective bank branches or post offices where they hold an eligible savings account.",
+    "faq": [
+      {
+        "question": "How is the premium paid?",
+        "answer": "The premium of Rs. 436 is auto-debited in one installment from the subscriber's bank account every year on or before 31st May."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "age",
+        "operator": "<=",
+        "value": "50"
+      }
+    ],
+    "requiredDocuments": [
+      "Bank Savings Account details",
+      "Aadhaar Card",
+      "Nominee details"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-001",
+    "sourceSystem": "CuratedSeed",
+    "title": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+    "shortDescription": "A special micro-credit facility for street vendors to resume their livelihoods.",
+    "description": "PM SVANidhi was launched to help street vendors resume their livelihood activities impacted by COVID-19. It provides affordable collateral-free working capital loans to street vendors.",
+    "benefits": "Provides collateral-free working capital loan up to Rs. 10,000 for a 1-year tenure. Enhanced loan limits (up to Rs. 20,000 and Rs. 50,000) are available on timely repayment. Includes 7% interest subvention.",
+    "applicationUrl": "https://pmsvanidhi.mohua.gov.in/",
+    "sourceUrl": "https://pmsvanidhi.mohua.gov.in/",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Employment & Skill Development",
+    "secondaryCategories": [
+      "Micro Credit",
+      "Street Vendors",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Vendors can apply directly on the PM SVANidhi portal or through a Common Service Centre (CSC) or Banking Correspondent (BC).",
+    "faq": [
+      {
+        "question": "Is collateral required for the loan?",
+        "answer": "No, the loan is entirely collateral-free."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Street Vendor"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Vending Certificate/ID Card issued by Urban Local Body"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-002",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "shortDescription": "A highly affordable accidental death and disability insurance scheme.",
+    "description": "PMSBY provides affordable insurance coverage for accidental death and disability. It is available to people in the age group 18 to 70 years with a bank or post office account who give their consent to join and enable auto-debit.",
+    "benefits": "Provides risk coverage of Rs. 2 Lakh for accidental death and full disability, and Rs. 1 Lakh for partial disability, at an annual premium of just Rs. 20.",
+    "applicationUrl": "https://jansuraksha.gov.in/",
+    "sourceUrl": "https://financialservices.gov.in/",
+    "ministry": "Ministry of Finance",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Senior Citizens & Social Welfare",
+    "secondaryCategories": [
+      "Insurance",
+      "Accident Cover",
+      "Social Security"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Enrollment is done by submitting a simple form and auto-debit consent at the bank or post office where the individual holds a savings account.",
+    "faq": [
+      {
+        "question": "What is the annual premium amount?",
+        "answer": "The premium is Rs. 20 per annum, deducted automatically from the bank account."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "age",
+        "operator": "<=",
+        "value": "70"
+      }
+    ],
+    "requiredDocuments": [
+      "Bank Savings Account details",
+      "Aadhaar Card"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-003",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Kisan Maan Dhan Yojana (PM-KMY)",
+    "shortDescription": "A voluntary and contributory pension scheme for Small and Marginal Farmers (SMF).",
+    "description": "PM-KMY is an old age pension scheme for Small and Marginal Farmers (SMFs). It serves as a social security net as they have minimal or no savings and do not have other sources of livelihood when they reach old age.",
+    "benefits": "Provides a guaranteed minimum pension of Rs. 3,000 per month after attaining the age of 60 years. The Central Government matches the farmer's monthly contribution (Rs. 55 to Rs. 200 depending on entry age).",
+    "applicationUrl": "https://maandhan.in/",
+    "sourceUrl": "https://agricoop.nic.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Pension",
+      "Social Security",
+      "Agriculture"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers can enroll through the nearest Common Service Centre (CSC) or online through the Maandhan portal by paying the initial contribution.",
+    "faq": [
+      {
+        "question": "Who is considered a Small and Marginal Farmer?",
+        "answer": "Farmers who own cultivable land up to 2 hectares as per land records of the concerned State/UT."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      },
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "18"
+      },
+      {
+        "attribute": "age",
+        "operator": "<=",
+        "value": "40"
+      },
+      {
+        "attribute": "landOwnership",
+        "operator": "<=",
+        "value": "2 hectares"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Savings Bank Account details",
+      "Khasra/Khatauni (Land records)"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-004",
+    "sourceSystem": "CuratedSeed",
+    "title": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+    "shortDescription": "A flagship scheme for focused and sustainable development of the fisheries sector in India.",
+    "description": "PMMSY aims to bring about the Blue Revolution through sustainable and responsible development of the fisheries sector in India. It addresses critical gaps in fish production and productivity, quality, technology, post-harvest infrastructure, and management.",
+    "benefits": "Provides financial assistance for establishment of new freshwater/marine finfish hatcheries, construction of ponds, provision of boats and nets, and cold chain infrastructure.",
+    "applicationUrl": "https://pmmsy.dof.gov.in/",
+    "sourceUrl": "https://dof.gov.in/pmmsy",
+    "ministry": "Ministry of Fisheries, Animal Husbandry and Dairying",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Fisheries",
+      "Agriculture Allied",
+      "Infrastructure"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Beneficiaries must submit detailed project proposals through the respective State/UT Fisheries Department.",
+    "faq": [
+      {
+        "question": "What is the subsidy pattern for general category?",
+        "answer": "The subsidy is generally up to 40% of the project cost for General category, and 60% for SC/ST/Women category."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "IN",
+        "value": "Fisher/Fish Farmer/Fish Worker/Entrepreneur"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Detailed Project Report (DPR)",
+      "Land possession certificates (for infrastructure projects)"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-005",
+    "sourceSystem": "CuratedSeed",
+    "title": "SVAMITVA Scheme",
+    "shortDescription": "Provides rural people with the right to document their residential properties to use as a financial asset.",
+    "description": "SVAMITVA (Survey of Villages and Mapping with Improvised Technology in Village Areas) aims to provide property rights to the residents of rural inhabited areas. It uses drone technology to map parcels of land, paving the way for using property as a financial asset for taking loans.",
+    "benefits": "Provides a 'Property Card' to rural households, establishing clear ownership which can be used to avail bank loans and resolve property disputes.",
+    "applicationUrl": "https://svamitva.nic.in/",
+    "sourceUrl": "https://svamitva.nic.in/",
+    "ministry": "Ministry of Panchayati Raj",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Housing",
+    "secondaryCategories": [
+      "Rural Development",
+      "Property Rights",
+      "Digitization"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "This is an administrative scheme. State revenue departments and the Survey of India conduct drone surveys. Property cards are automatically distributed to villagers after the survey and dispute resolution period.",
+    "faq": [
+      {
+        "question": "Can I apply for a survey individually?",
+        "answer": "No, surveys are conducted on a village-wide basis systematically by the State Government."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "residence",
+        "operator": "==",
+        "value": "Rural"
+      },
+      {
+        "attribute": "houseOwnership",
+        "operator": "==",
+        "value": "Owned"
+      }
+    ],
+    "requiredDocuments": []
+  },
+  {
+    "externalId": "SEED-MISC-006",
+    "sourceSystem": "CuratedSeed",
+    "title": "Innovation in Science Pursuit for Inspired Research (INSPIRE) Scholarship",
+    "shortDescription": "Provides scholarships for higher education to attract talented youth to study basic and natural sciences.",
+    "description": "The INSPIRE Scholarship (SHE) aims to encourage young, meritorious students to pursue undergraduate and postgraduate courses in Basic and Natural Sciences. The objective is to build the required critical human resource pool for strengthening and expanding the R&D base.",
+    "benefits": "Provides a scholarship of Rs. 80,000 per annum (Rs. 60k cash + Rs. 20k mentorship grant) for 5 years while pursuing B.Sc/M.Sc or Integrated M.Sc/M.S.",
+    "applicationUrl": "https://online-inspire.gov.in/",
+    "sourceUrl": "https://online-inspire.gov.in/",
+    "ministry": "Ministry of Science and Technology (DST)",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Students",
+    "secondaryCategories": [
+      "Scholarship",
+      "Higher Education",
+      "Science & Research"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Students must apply online on the INSPIRE portal after securing admission in a recognized college/university in eligible science subjects.",
+    "faq": [
+      {
+        "question": "Who is eligible based on marks?",
+        "answer": "Students who happen to be among the top 1% in their 12th standard board exams or rank within the top 10,000 in JEE/NEET."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "attribute": "age",
+        "operator": ">=",
+        "value": "17"
+      },
+      {
+        "attribute": "age",
+        "operator": "<=",
+        "value": "22"
+      }
+    ],
+    "requiredDocuments": [
+      "Class 12th Board Marksheet",
+      "Endorsement Certificate from College Principal",
+      "SBI Bank Account Details"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-007",
+    "sourceSystem": "CuratedSeed",
+    "title": "National Career Service (NCS)",
+    "shortDescription": "A national portal that brings together job seekers, employers, and skill providers on a single platform.",
+    "description": "NCS is a one-stop solution that provides a wide array of employment and career-related services to the citizens of India. It works towards bridging the gap between job seekers and employers, candidates seeking training and skill providers, and candidates seeking career guidance.",
+    "benefits": "Free access to job postings across India, career counseling services, skill training directories, and participation in online/offline job fairs.",
+    "applicationUrl": "https://www.ncs.gov.in/",
+    "sourceUrl": "https://www.ncs.gov.in/",
+    "ministry": "Ministry of Labour and Employment",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Employment & Skill Development",
+    "secondaryCategories": [
+      "Job Portal",
+      "Career Counseling",
+      "Employment"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Job seekers can register on the NCS portal for free by creating an account and completing their profile and resume details.",
+    "faq": [
+      {
+        "question": "Is there any fee for registration on NCS?",
+        "answer": "No, registration and all services on the NCS portal are completely free of charge."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "nationality",
+        "operator": "==",
+        "value": "Indian"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card / PAN Card (for ID verification)",
+      "Educational certificates",
+      "Resume/CV"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-008",
+    "sourceSystem": "CuratedSeed",
+    "title": "Atal Innovation Mission (AIM)",
+    "shortDescription": "A flagship initiative to promote a culture of innovation and entrepreneurship in the country.",
+    "description": "AIM establishes Atal Tinkering Labs (ATLs) in schools across India to foster curiosity and innovation in young minds. It also supports startups through Atal Incubation Centres (AICs) and Atal Community Innovation Centres (ACICs).",
+    "benefits": "Schools get a grant-in-aid of Rs. 20 Lakh to set up an ATL. Incubators get up to Rs. 10 Crore scale-up support to foster startups.",
+    "applicationUrl": "https://aim.gov.in/",
+    "sourceUrl": "https://aim.gov.in/",
+    "ministry": "NITI Aayog",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "MSME & Entrepreneurship",
+    "secondaryCategories": [
+      "Innovation",
+      "Education",
+      "Startup"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Schools or organizations must apply online when AIM opens the application window for ATLs or AICs. Proposals undergo rigorous screening by NITI Aayog.",
+    "faq": [
+      {
+        "question": "Can private schools apply for ATL?",
+        "answer": "Yes, both government and private schools can apply for setting up an Atal Tinkering Lab."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "organizationType",
+        "operator": "IN",
+        "value": "School,University,NGO,Startup"
+      }
+    ],
+    "requiredDocuments": [
+      "Institution Registration Details",
+      "Infrastructure availability proof (for ATL/AIC)"
+    ]
+  }
+]

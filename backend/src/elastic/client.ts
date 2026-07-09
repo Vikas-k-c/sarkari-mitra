@@ -22,7 +22,12 @@ export const initializeElasticsearch = async () => {
             benefits: { type: 'text' },
             categoryId: { type: 'keyword' },
             categoryName: { type: 'keyword' },
+            secondaryCategories: { type: 'keyword' },
             state: { type: 'keyword' },
+            governmentLevel: { type: 'keyword' },
+            verificationStatus: { type: 'keyword' },
+            applicationProcess: { type: 'text' },
+            keywords: { type: 'keyword' },
             isActive: { type: 'boolean' },
             createdAt: { type: 'date' },
             eligibility: {
