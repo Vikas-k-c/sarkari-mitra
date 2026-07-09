@@ -1997,5 +1997,199 @@
       "Institution Registration Details",
       "Infrastructure availability proof (for ATL/AIC)"
     ]
+  },
+  {
+    "externalId": "SEED-MISC-009",
+    "sourceSystem": "CuratedSeed",
+    "title": "Kisan Credit Card (KCC)",
+    "shortDescription": "Provides adequate and timely credit support from the banking system under a single window to the farmers.",
+    "description": "The KCC scheme aims to save farmers from the high interest rates of the unorganized credit sector. It provides farmers with adequate and timely credit for their comprehensive credit requirements (such as cultivation, post-harvest, and consumption needs) under a single window.",
+    "benefits": "Short term credit limits for crops and term loans for allied activities (like animal husbandry and fisheries). Offers a concessional interest rate of 4% per annum if repaid promptly.",
+    "applicationUrl": "https://sbi.co.in/web/agri-rural/agriculture-banking/crop-loan/kisan-credit-card",
+    "sourceUrl": "https://agricoop.nic.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Credit",
+      "Agriculture Loan",
+      "Financial Assistance"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Farmers can apply at any cooperative bank, regional rural bank, or commercial bank with basic documents like land holding details and crop patterns.",
+    "faq": [
+      {
+        "question": "Can I get a KCC for animal husbandry?",
+        "answer": "Yes, the KCC facility has been extended to fisheries and animal husbandry farmers to help them meet their working capital needs."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "IN",
+        "value": "Farmer,Tenant Farmer,Sharecropper"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Land ownership or tenancy documents",
+      "Passport size photographs"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-010",
+    "sourceSystem": "CuratedSeed",
+    "title": "Soil Health Card Scheme",
+    "shortDescription": "Provides farmers with a report on the nutrient status of their soil and recommendations on appropriate dosage of nutrients.",
+    "description": "The Soil Health Card scheme aims at promoting soil test based and balanced use of fertilizers to enable farmers to realize higher yields at lower cost. The card contains the status of soil with respect to 12 parameters (N, P, K, Macro and Micro nutrients).",
+    "benefits": "Farmers receive a printed report detailing the exact nutrient deficiencies in their land and the specific fertilizers needed to improve soil health and crop productivity.",
+    "applicationUrl": "https://soilhealth.dac.gov.in/",
+    "sourceUrl": "https://soilhealth.dac.gov.in/",
+    "ministry": "Ministry of Agriculture and Farmers Welfare",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Farmers",
+    "secondaryCategories": [
+      "Agriculture",
+      "Soil Health",
+      "Advisory"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "State Government administrations collect soil samples. Farmers do not need to apply individually for the initial grid sampling, but can track or request reports from the nearest Agriculture office or CSC.",
+    "faq": [
+      {
+        "question": "How often is the Soil Health Card provided?",
+        "answer": "It is provided to all farmers at an interval of 2 years."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "occupation",
+        "operator": "==",
+        "value": "Farmer"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Land details (Khasra/Khatauni)"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-011",
+    "sourceSystem": "CuratedSeed",
+    "title": "Jal Jeevan Mission (JJM)",
+    "shortDescription": "Aims to provide safe and adequate drinking water through individual household tap connections to all households in rural India.",
+    "description": "Jal Jeevan Mission is envisioned to provide safe and adequate drinking water through individual household tap connections by 2024 to all households in rural India. The programme also implements source sustainability measures as mandatory elements, such as recharge and reuse through greywater management.",
+    "benefits": "Provides Functional Household Tap Connections (FHTC) providing 55 liters per capita per day of prescribed quality drinking water on a regular basis.",
+    "applicationUrl": "https://jaljeevanmission.gov.in/",
+    "sourceUrl": "https://jaljeevanmission.gov.in/",
+    "ministry": "Ministry of Jal Shakti",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Housing",
+    "secondaryCategories": [
+      "Rural Development",
+      "Water Supply",
+      "Infrastructure"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "This is a community-driven infrastructure scheme. Individual households do not apply for funds directly; Gram Panchayats and Village Water & Sanitation Committees (VWSC) plan and execute the village water supply systems.",
+    "faq": [
+      {
+        "question": "Is there any contribution required from the village?",
+        "answer": "Yes, communities are encouraged to contribute 5% to 10% of the capital cost in cash, kind, or labor towards in-village infrastructure."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "residence",
+        "operator": "==",
+        "value": "Rural"
+      }
+    ],
+    "requiredDocuments": []
+  },
+  {
+    "externalId": "SEED-MISC-012",
+    "sourceSystem": "CuratedSeed",
+    "title": "Swachh Bharat Mission (Gramin)",
+    "shortDescription": "Aims to achieve a clean and Open Defecation Free (ODF) India by providing sanitation facilities in rural areas.",
+    "description": "Swachh Bharat Mission (Gramin) focuses on improving the quality of life in rural areas by promoting cleanliness, hygiene, and eliminating open defecation. It provides financial incentives to rural households to construct Individual Household Latrines (IHHL).",
+    "benefits": "Provides an incentive of Rs. 12,000 for the construction of an Individual Household Latrine (IHHL) for BPL households and identified APL households.",
+    "applicationUrl": "https://swachhbharatmission.gov.in/",
+    "sourceUrl": "https://swachhbharatmission.gov.in/",
+    "ministry": "Ministry of Jal Shakti",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Housing",
+    "secondaryCategories": [
+      "Sanitation",
+      "Rural Development",
+      "Social Welfare"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Eligible households can apply online on the SBM portal or submit a physical application to the Gram Panchayat for the construction of a toilet.",
+    "faq": [
+      {
+        "question": "Who is eligible for the Rs. 12,000 incentive?",
+        "answer": "All BPL households and identified APL households (such as SC/ST, small/marginal farmers, women-headed households) without a toilet."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "residence",
+        "operator": "==",
+        "value": "Rural"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "BPL Ration Card (if applicable)"
+    ]
+  },
+  {
+    "externalId": "SEED-MISC-013",
+    "sourceSystem": "CuratedSeed",
+    "title": "Poshan Abhiyaan (National Nutrition Mission)",
+    "shortDescription": "A multi-ministerial convergence mission to ensure attainment of a malnutrition-free India.",
+    "description": "Poshan Abhiyaan is India's flagship programme to improve nutritional outcomes for children, pregnant women, and lactating mothers. It directs the attention of the country towards the problem of malnutrition and addresses it in a mission-mode.",
+    "benefits": "Provides targeted supplementary nutrition, health check-ups, and immunization at Anganwadi centers, drastically reducing stunting, under-nutrition, and anemia.",
+    "applicationUrl": "https://poshanabhiyaan.gov.in/",
+    "sourceUrl": "https://poshanabhiyaan.gov.in/",
+    "ministry": "Ministry of Women and Child Development",
+    "state": "All India",
+    "language": "en",
+    "categoryName": "Women",
+    "secondaryCategories": [
+      "Health",
+      "Child Welfare",
+      "Nutrition"
+    ],
+    "governmentLevel": "CENTRAL",
+    "verificationStatus": "VERIFIED",
+    "applicationProcess": "Beneficiaries (pregnant women, lactating mothers, children under 6) must register at their local Anganwadi Centre to receive the supplementary nutrition and health monitoring.",
+    "faq": [
+      {
+        "question": "Is this a cash transfer scheme?",
+        "answer": "No, it primarily provides supplementary nutrition (food rations or hot cooked meals) and health services rather than direct cash transfers."
+      }
+    ],
+    "eligibility": [
+      {
+        "attribute": "gender",
+        "operator": "IN",
+        "value": "Female,Male"
+      }
+    ],
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Mother and Child Protection (MCP) Card"
+    ]
   }
 ]
