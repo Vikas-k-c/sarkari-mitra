@@ -1,0 +1,38 @@
+name: Sarkari Mitra Production Sync
+
+on:
+  schedule:
+    # Run every day at midnight (UTC)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Trigger Backend Sync
+        id: trigger_sync
+        run: |
+          echo "Starting synchronization..."
+          # Set backend URL securely as an environment variable in Render, or use hardcoded Render domain here
+          BACKEND_URL=${{ secrets.PROD_API_URL }}
+          SYNC_SECRET=${{ secrets.SYNC_SECRET }}
+          
+          # The backend endpoint for manual/automated sync
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "${BACKEND_URL}/api/v1/ingestion/sync" \
+            -H "x-sync-secret: ${SYNC_SECRET}" \
+            -H "Content-Type: application/json")
+          
+          HTTP_STATUS=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          
+          echo "Response Status: $HTTP_STATUS"
+          echo "Response Body: $BODY"
+          
+          if [ "$HTTP_STATUS" -ne 200 ]; then
+            echo "Synchronization failed with status code $HTTP_STATUS"
+            exit 1
+          fi
+          
+          echo "Synchronization completed successfully."

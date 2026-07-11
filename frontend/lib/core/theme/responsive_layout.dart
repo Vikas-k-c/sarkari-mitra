@@ -11,9 +11,7 @@ class ResponsiveLayout extends StatelessWidget {
     required this.child,
     this.appBar,
     this.floatingActionButton,
-    this.backgroundColor,
-  });
-
+    this.backgroundColor,});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

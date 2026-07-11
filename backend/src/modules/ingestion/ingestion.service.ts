@@ -43,8 +43,8 @@ export class IngestionService {
     return keywords;
   }
 
-  async runPipeline() {
-    logger.info('Starting Ingestion Pipeline');
+  async runPipeline(forceEsSync: boolean = false) {
+    logger.info('[Sync] Synchronization Started');
     
     const startTime = Date.now();
     let processed = 0;
@@ -84,7 +84,8 @@ export class IngestionService {
                 externalId: schemeData.externalId,
                 sourceSystem: schemeData.sourceSystem
               }
-            }
+            },
+            include: { category: true, eligibility: true, documents: true }
           });
 
           // Ensure category exists
@@ -97,7 +98,7 @@ export class IngestionService {
             });
           }
 
-          let savedScheme;
+          let savedScheme = existing;
 
           if (existing) {
             // Check if content actually changed
@@ -111,10 +112,9 @@ export class IngestionService {
               });
               
               skipped++;
-              continue;
-            }
-
-            logger.info(`Updated scheme detected: ${schemeData.title}. Updating DB and Vectors.`);
+              if (!forceEsSync) continue;
+            } else {
+              logger.info(`Updated scheme detected: ${schemeData.title}. Updating DB and Vectors.`);
             // Update PostgreSQL
             savedScheme = await prisma.scheme.update({
               where: { id: existing.id },
@@ -151,6 +151,7 @@ export class IngestionService {
               include: { eligibility: true, documents: true, category: true }
             });
             updatedSchemes++;
+            }
           } else {
             logger.info(`New scheme detected: ${schemeData.title}. Inserting into DB and Vectors.`);
             // PostgreSQL Storage
@@ -192,6 +193,12 @@ export class IngestionService {
 
           // Elasticsearch Reindexing
           try {
+            if (!savedScheme) {
+              logger.error(`[Sync] Skipped ES indexing because savedScheme is null for ${schemeData.title}`);
+              continue;
+            }
+            logger.info(`[ES Sync] Indexing scheme ${savedScheme.id} (${savedScheme.title}) [Category: ${savedScheme.category?.name || 'Unknown'}] [Source: ${savedScheme.sourceSystem}]`);
+            
             await elasticClient.index({
               index: 'schemes',
               id: savedScheme.id,
@@ -202,7 +209,7 @@ export class IngestionService {
                 description: savedScheme.description,
                 benefits: savedScheme.benefits,
                 categoryId: savedScheme.categoryId,
-                categoryName: savedScheme.category.name,
+                categoryName: savedScheme.category?.name || 'Uncategorized',
                 secondaryCategories: savedScheme.secondaryCategories,
                 state: savedScheme.state,
                 governmentLevel: savedScheme.governmentLevel,
@@ -213,34 +220,39 @@ export class IngestionService {
                 language: savedScheme.language,
                 isActive: savedScheme.isActive,
                 createdAt: savedScheme.createdAt,
-                eligibility: savedScheme.eligibility.map(e => ({
+                eligibility: Array.isArray(savedScheme.eligibility) ? savedScheme.eligibility.map((e: any) => ({
                   attribute: e.attribute,
                   operator: e.operator,
                   value: e.value
-                }))
+                })) : []
               }
             });
             esUpdates++;
           } catch (esError: any) {
-            logger.error(`Failed to reindex scheme ${savedScheme.id} to Elasticsearch:`, { error: esError.message || esError });
+            logger.error(`[ES Sync] Failed to reindex scheme ${savedScheme!.id} (${savedScheme!.title}). Missing properties or ES error:`, { error: esError.message || esError });
           }
 
           // Qdrant Vectorization & Storage (Only happens for new or updated schemes)
           try {
-             await RagService.embedAndStoreScheme(savedScheme);
+             logger.info(`[Qdrant Sync] Vectorizing scheme ${savedScheme!.id} (${savedScheme!.title})`);
+             await RagService.embedAndStoreScheme(savedScheme!);
              qdrantUpdates++;
           } catch (qdrantError: any) {
-             logger.error(`Failed to vectorize scheme ${savedScheme.id} to Qdrant:`, { error: qdrantError.message || qdrantError });
+             logger.warn(`[Sync] Failed to vectorize scheme ${savedScheme!.id} (${savedScheme!.title}). Qdrant may be unavailable. Error: ${qdrantError.message || qdrantError}`);
           }
         }
       } catch (error: any) {
-        logger.error(`Failed to ingest from adapter ${adapter.sourceName}:`, { error: error.message || error });
+        logger.error(`[Sync] Stage Name: Adapter Fetch. Error Message: Failed to ingest from adapter ${adapter.sourceName}. Schemes Successfully Processed: ${processed}. Failures: 1`, { error: error.message || error });
         adapterErrors++;
       }
     }
 
     const executionTimeMs = Date.now() - startTime;
-    logger.info(`Ingestion Pipeline completed in ${executionTimeMs}ms. New: ${newSchemes}, Updated: ${updatedSchemes}, Skipped: ${skipped}`);
+    logger.info(`[Sync] Synchronization Completed Successfully`);
+    logger.info(`[Sync] Schemes Processed: ${processed}`);
+    logger.info(`[Sync] PostgreSQL Updated: New ${newSchemes}, Updated ${updatedSchemes}`);
+    logger.info(`[Sync] Elasticsearch Updated: ${esUpdates}`);
+    logger.info(`[Sync] Qdrant Updated: ${qdrantUpdates}`);
     
     return {
       processed,

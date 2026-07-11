@@ -54,16 +54,30 @@ export class SchemeService {
     return scheme;
   }
 
-  static async findAll(categoryId?: string, lang?: string) {
+  static async findAll(filters: { categoryId?: string, categoryName?: string, lang?: string, governmentLevel?: string, ministry?: string, sort?: string, page?: number, limit?: number }) {
+    const whereClause: any = { isActive: true };
+    if (filters.categoryId) whereClause.categoryId = filters.categoryId;
+    if (filters.categoryName) whereClause.category = { name: filters.categoryName };
+    if (filters.governmentLevel) whereClause.governmentLevel = filters.governmentLevel;
+    if (filters.ministry) whereClause.ministry = filters.ministry;
+
+    const orderByClause: any = filters.sort === 'recent' ? { createdAt: 'desc' } : { applicationDeadline: 'asc' };
+
+    const page = filters.page && filters.page > 0 ? filters.page : 1;
+    const limit = filters.limit && filters.limit > 0 ? filters.limit : 20;
+    const skip = (page - 1) * limit;
+
     let schemes = await prisma.scheme.findMany({
-      where: categoryId ? { categoryId, isActive: true } : { isActive: true },
+      where: whereClause,
       include: {
         category: true
       },
-      orderBy: {
-        applicationDeadline: 'asc'
-      }
+      orderBy: orderByClause,
+      skip,
+      take: limit
     });
+
+    const lang = filters.lang;
 
     if (lang === 'hi' && schemes.length > 0) {
       try {
@@ -99,5 +113,34 @@ export class SchemeService {
         source: true
       }
     });
+  }
+
+  static async getCategories() {
+    return prisma.schemeCategory.findMany({
+      orderBy: { name: 'asc' }
+    });
+  }
+
+  static async getMetrics() {
+    const totalSchemes = await prisma.scheme.count({ where: { isActive: true } });
+    
+    // For specific categories we can count by category name if available, or just fetch all categories and count
+    const categories = await prisma.schemeCategory.findMany({
+      include: {
+        _count: {
+          select: { schemes: true }
+        }
+      }
+    });
+
+    const metrics: Record<string, number> = {
+      total: totalSchemes
+    };
+
+    categories.forEach(cat => {
+      metrics[cat.name] = (cat as any)._count?.schemes ?? 0;
+    });
+
+    return metrics;
   }
 }

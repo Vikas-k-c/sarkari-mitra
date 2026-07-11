@@ -21,18 +21,10 @@ export class RecommendationController {
     }
   }
 
-  static async logInteraction(req: Request, res: Response, next: NextFunction) {
+  static async getTrending(req: Request, res: Response, next: NextFunction) {
     try {
-      const userId = req.user?.id;
-      const { schemeId, type } = req.body;
-      
-      if (!userId) {
-        res.status(401).json({ success: false, message: 'Unauthorized' });
-        return;
-      }
-
-      const interaction = await RecommendationService.logInteraction(userId, schemeId, type);
-      res.status(201).json({ success: true, data: interaction });
+      const trending = await RecommendationService.getTrending();
+      res.status(200).json({ success: true, data: trending });
     } catch (error) {
       next(error);
     }

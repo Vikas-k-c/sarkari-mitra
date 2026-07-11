@@ -52,6 +52,33 @@
       "Citizenship certificate",
       "Landholding papers",
       "Bank account details"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "income support",
+      "cash transfer",
+      "dbt",
+      "small farmer",
+      "pmksny",
+      "6000 rupees",
+      "pradhan",
+      "mantri",
+      "samman"
     ]
   },
   {
@@ -97,6 +124,30 @@
       "Bank Passbook",
       "Land Record / Tenancy Agreement",
       "Sowing Certificate"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "pradhan",
+      "mantri",
+      "fasal",
+      "bima",
+      "yojana",
+      "pmfby"
     ]
   },
   {
@@ -142,6 +193,26 @@
       "PAN Card / Voter ID",
       "Land Ownership Documents",
       "Passport size photographs"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "credit",
+      "card"
     ]
   },
   {
@@ -185,6 +256,27 @@
     "requiredDocuments": [
       "Aadhaar Card",
       "Land details (Khasra/Khatauni)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "health",
+      "card",
+      "scheme"
     ]
   },
   {
@@ -231,6 +323,32 @@
       "Land Ownership Documents",
       "Bank Details",
       "Existing electricity connection details (if applicable)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "pradhan",
+      "mantri",
+      "urja",
+      "suraksha",
+      "evam",
+      "utthaan",
+      "mahabhiyan",
+      "pmkusum"
     ]
   },
   {
@@ -270,6 +388,27 @@
     "requiredDocuments": [
       "Aadhaar Card",
       "Bank Passbook (for payment routing)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "national",
+      "market",
+      "enam"
     ]
   },
   {
@@ -311,6 +450,26 @@
       "Bank Loan Application Form",
       "KYC Documents",
       "Land Ownership Documents (for infrastructure site)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "infrastructure",
+      "fund"
     ]
   },
   {
@@ -357,6 +516,27 @@
       "RTC / Pahani (Land Record)",
       "Bank Passbook",
       "Crop Sowing Certificate"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "raitha",
+      "siri",
+      "karnataka"
     ]
   },
   {
@@ -397,6 +577,29 @@
       "Aadhaar Card",
       "Land Records",
       "Cluster membership declaration"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "national",
+      "mission",
+      "natural",
+      "farming",
+      "nmnf"
     ]
   },
   {
@@ -443,6 +646,27 @@
       "Income Certificate",
       "Class 12th Marksheet",
       "Bank account details"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "central",
+      "sector",
+      "scheme",
+      "students"
     ]
   },
   {
@@ -494,6 +718,29 @@
       "Income Certificate",
       "Admission letter issued by Directorate of Technical Education",
       "Tuition fee receipt"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "aicte",
+      "pragati",
+      "scheme",
+      "girl",
+      "students",
+      "degreediploma"
     ]
   },
   {
@@ -545,6 +792,29 @@
       "Income Certificate",
       "Aadhaar Card",
       "Admission letter"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "aicte",
+      "saksham",
+      "scheme",
+      "specially",
+      "abled",
+      "students"
     ]
   },
   {
@@ -587,6 +857,25 @@
       "Aadhaar Card",
       "PAN Card of student and co-borrower",
       "Income proof of co-borrower"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "vidyalaxmi",
+      "scheme"
     ]
   },
   {
@@ -639,6 +928,27 @@
       "Previous year's mark sheet",
       "Fee receipt of current course year",
       "Aadhaar Card"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "post",
+      "matric",
+      "scst",
+      "students"
     ]
   },
   {
@@ -685,6 +995,27 @@
       "Class 7th Marksheet",
       "Caste Certificate (if applicable)",
       "Aadhaar Card"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "national",
+      "meanscummerit",
+      "scheme",
+      "nmmss"
     ]
   },
   {
@@ -734,6 +1065,24 @@
       "Birth Certificate of the girl child",
       "Identity Proof of the parent/guardian",
       "Address Proof of the parent/guardian"
+    ],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "sukanya",
+      "samriddhi",
+      "yojana"
     ]
   },
   {
@@ -780,6 +1129,26 @@
       "Ration Card or document identifying family composition",
       "Bank Account Details",
       "Passport size photograph"
+    ],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "pradhan",
+      "mantri",
+      "ujjwala",
+      "yojana",
+      "pmuy"
     ]
   },
   {
@@ -825,6 +1194,24 @@
       "Aadhaar Card",
       "SHG Membership proof",
       "Bank Account details"
+    ],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "lakhpati",
+      "didi",
+      "scheme"
     ]
   },
   {
@@ -866,6 +1253,27 @@
       "Mother and Child Protection (MCP) Card",
       "Bank or Post Office Account details",
       "Child's Birth Certificate (for 3rd installment)"
+    ],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "pradhan",
+      "mantri",
+      "matru",
+      "vandana",
+      "yojana",
+      "pmmvy"
     ]
   },
   {
@@ -902,7 +1310,26 @@
         "value": "Female"
       }
     ],
-    "requiredDocuments": []
+    "requiredDocuments": [],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "beti",
+      "bachao",
+      "padhao",
+      "bbbp"
+    ]
   },
   {
     "externalId": "SEED-WOMEN-006",
@@ -940,6 +1367,24 @@
     ],
     "requiredDocuments": [
       "Any supporting documents regarding the dispute (if available)"
+    ],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "mission",
+      "shakti",
+      "adalat"
     ]
   },
   {
@@ -986,6 +1431,26 @@
       "Voter ID / Ration Card",
       "Bank Account details",
       "Passport size photographs"
+    ],
+    "keywords": [
+      "employment",
+      "jobs",
+      "career",
+      "work",
+      "skill",
+      "training",
+      "placement",
+      "internship",
+      "youth",
+      "rozgar",
+      "vocational",
+      "apprenticeship",
+      "mahatma",
+      "gandhi",
+      "national",
+      "rural",
+      "guarantee",
+      "mgnrega"
     ]
   },
   {
@@ -1031,6 +1496,26 @@
       "Aadhaar Card",
       "Bank Account details",
       "Education certificates"
+    ],
+    "keywords": [
+      "employment",
+      "jobs",
+      "career",
+      "work",
+      "skill",
+      "training",
+      "placement",
+      "internship",
+      "youth",
+      "rozgar",
+      "vocational",
+      "apprenticeship",
+      "pradhan",
+      "mantri",
+      "kaushal",
+      "vikas",
+      "yojana",
+      "pmkvy"
     ]
   },
   {
@@ -1072,6 +1557,31 @@
       "Address Proof",
       "Business Plan/Project Report",
       "Quotation of machinery/items to be purchased"
+    ],
+    "keywords": [
+      "msme",
+      "business",
+      "startup",
+      "entrepreneur",
+      "enterprise",
+      "industry",
+      "manufacturing",
+      "trade",
+      "commerce",
+      "company",
+      "small business",
+      "micro",
+      "mudra loan",
+      "shishu",
+      "kishor",
+      "tarun",
+      "collateral free",
+      "credit",
+      "pradhan",
+      "mantri",
+      "mudra",
+      "yojana",
+      "pmmy"
     ]
   },
   {
@@ -1118,6 +1628,26 @@
       "Mobile Number",
       "Bank Account details",
       "Ration Card"
+    ],
+    "keywords": [
+      "msme",
+      "business",
+      "startup",
+      "entrepreneur",
+      "enterprise",
+      "industry",
+      "manufacturing",
+      "trade",
+      "commerce",
+      "company",
+      "small business",
+      "micro",
+      "vishwakarma",
+      "yojana",
+      "government scheme",
+      "sarkari yojana",
+      "benefit",
+      "direct benefit transfer"
     ]
   },
   {
@@ -1170,6 +1700,23 @@
       "Caste Certificate (if applicable)",
       "Project Report",
       "Clearance from pollution control board (if necessary)"
+    ],
+    "keywords": [
+      "msme",
+      "business",
+      "startup",
+      "entrepreneur",
+      "enterprise",
+      "industry",
+      "manufacturing",
+      "trade",
+      "commerce",
+      "company",
+      "small business",
+      "micro",
+      "standup",
+      "india",
+      "scheme"
     ]
   },
   {
@@ -1216,6 +1763,25 @@
       "DPIIT Recognition Certificate",
       "Pitch Deck / Business Plan",
       "Details of core team"
+    ],
+    "keywords": [
+      "msme",
+      "business",
+      "startup",
+      "entrepreneur",
+      "enterprise",
+      "industry",
+      "manufacturing",
+      "trade",
+      "commerce",
+      "company",
+      "small business",
+      "micro",
+      "india",
+      "seed",
+      "fund",
+      "scheme",
+      "sisfs"
     ]
   },
   {
@@ -1257,6 +1823,25 @@
       "Project Report",
       "Education/Skill Certificates",
       "Category Certificate (if applicable)"
+    ],
+    "keywords": [
+      "employment",
+      "jobs",
+      "career",
+      "work",
+      "skill",
+      "training",
+      "placement",
+      "internship",
+      "youth",
+      "rozgar",
+      "vocational",
+      "apprenticeship",
+      "prime",
+      "ministers",
+      "generation",
+      "programme",
+      "pmegp"
     ]
   },
   {
@@ -1297,6 +1882,27 @@
       "Udyam Registration Certificate",
       "Project Report",
       "Financial statements of the business"
+    ],
+    "keywords": [
+      "msme",
+      "business",
+      "startup",
+      "entrepreneur",
+      "enterprise",
+      "industry",
+      "manufacturing",
+      "trade",
+      "commerce",
+      "company",
+      "small business",
+      "micro",
+      "credit",
+      "guarantee",
+      "fund",
+      "trust",
+      "small",
+      "enterprises",
+      "cgtmse"
     ]
   },
   {
@@ -1335,6 +1941,32 @@
     ],
     "requiredDocuments": [
       "Aadhaar Card or Ration Card (for identity verification at the hospital)"
+    ],
+    "keywords": [
+      "health",
+      "medical",
+      "hospital",
+      "insurance",
+      "treatment",
+      "disease",
+      "illness",
+      "surgery",
+      "medicine",
+      "clinic",
+      "swasthya",
+      "ayushman",
+      "healthcare",
+      "wellness",
+      "5 lakh",
+      "free treatment",
+      "health card",
+      "bpl medical",
+      "bharat",
+      "pradhan",
+      "mantri",
+      "arogya",
+      "yojana",
+      "pmjay"
     ]
   },
   {
@@ -1373,6 +2005,28 @@
     ],
     "requiredDocuments": [
       "Medical Prescription (for prescription drugs)"
+    ],
+    "keywords": [
+      "health",
+      "medical",
+      "hospital",
+      "insurance",
+      "treatment",
+      "disease",
+      "illness",
+      "surgery",
+      "medicine",
+      "clinic",
+      "swasthya",
+      "ayushman",
+      "healthcare",
+      "wellness",
+      "pradhan",
+      "mantri",
+      "bhartiya",
+      "janaushadhi",
+      "pariyojana",
+      "pmbjp"
     ]
   },
   {
@@ -1418,6 +2072,30 @@
       "Aadhaar Card",
       "Income Proof",
       "Land ownership documents (for BLC vertical)"
+    ],
+    "keywords": [
+      "housing",
+      "house",
+      "home",
+      "construction",
+      "shelter",
+      "accommodation",
+      "residential",
+      "awwas",
+      "pmay",
+      "property",
+      "building",
+      "rural house",
+      "urban house",
+      "pucca house",
+      "homeless",
+      "subsidy loan",
+      "pradhan",
+      "mantri",
+      "awas",
+      "yojana",
+      "urban",
+      "pmayu"
     ]
   },
   {
@@ -1464,6 +2142,30 @@
       "Job Card (MGNREGA)",
       "Bank Account details",
       "Swachh Bharat Mission (SBM) number"
+    ],
+    "keywords": [
+      "housing",
+      "house",
+      "home",
+      "construction",
+      "shelter",
+      "accommodation",
+      "residential",
+      "awwas",
+      "pmay",
+      "property",
+      "building",
+      "rural house",
+      "urban house",
+      "pucca house",
+      "homeless",
+      "subsidy loan",
+      "pradhan",
+      "mantri",
+      "awas",
+      "yojana",
+      "gramin",
+      "pmayg"
     ]
   },
   {
@@ -1508,6 +2210,23 @@
     "requiredDocuments": [
       "Bank Savings Account Details",
       "Aadhaar Card"
+    ],
+    "keywords": [
+      "senior citizen",
+      "pension",
+      "elderly",
+      "old age",
+      "social security",
+      "welfare",
+      "retirement",
+      "disabled",
+      "handicap",
+      "divyang",
+      "orphans",
+      "vulnerable",
+      "bpl",
+      "atal",
+      "yojana"
     ]
   },
   {
@@ -1553,6 +2272,26 @@
       "Age Proof (Aadhaar/Voter ID)",
       "BPL Card / Income Certificate",
       "Bank/Post Office Account Details"
+    ],
+    "keywords": [
+      "senior citizen",
+      "pension",
+      "elderly",
+      "old age",
+      "social security",
+      "welfare",
+      "retirement",
+      "disabled",
+      "handicap",
+      "divyang",
+      "orphans",
+      "vulnerable",
+      "bpl",
+      "indira",
+      "gandhi",
+      "national",
+      "scheme",
+      "ignoaps"
     ]
   },
   {
@@ -1604,6 +2343,27 @@
       "BPL Ration Card",
       "Aadhaar Card",
       "Bank Account details"
+    ],
+    "keywords": [
+      "senior citizen",
+      "pension",
+      "elderly",
+      "old age",
+      "social security",
+      "welfare",
+      "retirement",
+      "disabled",
+      "handicap",
+      "divyang",
+      "orphans",
+      "vulnerable",
+      "bpl",
+      "indira",
+      "gandhi",
+      "national",
+      "disability",
+      "scheme",
+      "igndps"
     ]
   },
   {
@@ -1648,6 +2408,28 @@
       "Bank Savings Account details",
       "Aadhaar Card",
       "Nominee details"
+    ],
+    "keywords": [
+      "senior citizen",
+      "pension",
+      "elderly",
+      "old age",
+      "social security",
+      "welfare",
+      "retirement",
+      "disabled",
+      "handicap",
+      "divyang",
+      "orphans",
+      "vulnerable",
+      "bpl",
+      "pradhan",
+      "mantri",
+      "jeevan",
+      "jyoti",
+      "bima",
+      "yojana",
+      "pmjjby"
     ]
   },
   {
@@ -1687,6 +2469,25 @@
     "requiredDocuments": [
       "Aadhaar Card",
       "Vending Certificate/ID Card issued by Urban Local Body"
+    ],
+    "keywords": [
+      "employment",
+      "jobs",
+      "career",
+      "work",
+      "skill",
+      "training",
+      "placement",
+      "internship",
+      "youth",
+      "rozgar",
+      "vocational",
+      "apprenticeship",
+      "street",
+      "vendors",
+      "atmanirbhar",
+      "nidhi",
+      "svanidhi"
     ]
   },
   {
@@ -1731,6 +2532,27 @@
     "requiredDocuments": [
       "Bank Savings Account details",
       "Aadhaar Card"
+    ],
+    "keywords": [
+      "senior citizen",
+      "pension",
+      "elderly",
+      "old age",
+      "social security",
+      "welfare",
+      "retirement",
+      "disabled",
+      "handicap",
+      "divyang",
+      "orphans",
+      "vulnerable",
+      "bpl",
+      "pradhan",
+      "mantri",
+      "suraksha",
+      "bima",
+      "yojana",
+      "pmsby"
     ]
   },
   {
@@ -1786,6 +2608,30 @@
       "Aadhaar Card",
       "Savings Bank Account details",
       "Khasra/Khatauni (Land records)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "pradhan",
+      "mantri",
+      "maan",
+      "dhan",
+      "yojana",
+      "pmkmy"
     ]
   },
   {
@@ -1826,6 +2672,30 @@
       "Aadhaar Card",
       "Detailed Project Report (DPR)",
       "Land possession certificates (for infrastructure projects)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "pradhan",
+      "mantri",
+      "matsya",
+      "sampada",
+      "yojana",
+      "pmmsy"
     ]
   },
   {
@@ -1867,7 +2737,26 @@
         "value": "Owned"
       }
     ],
-    "requiredDocuments": []
+    "requiredDocuments": [],
+    "keywords": [
+      "housing",
+      "house",
+      "home",
+      "construction",
+      "shelter",
+      "accommodation",
+      "residential",
+      "awwas",
+      "pmay",
+      "property",
+      "building",
+      "svamitva",
+      "scheme",
+      "government scheme",
+      "sarkari yojana",
+      "benefit",
+      "direct benefit transfer"
+    ]
   },
   {
     "externalId": "SEED-MISC-006",
@@ -1917,6 +2806,29 @@
       "Class 12th Board Marksheet",
       "Endorsement Certificate from College Principal",
       "SBI Bank Account Details"
+    ],
+    "keywords": [
+      "student",
+      "education",
+      "college",
+      "school",
+      "university",
+      "scholarship",
+      "fellowship",
+      "study",
+      "learning",
+      "degree",
+      "diploma",
+      "engineering",
+      "medical student",
+      "hostel",
+      "academic",
+      "innovation",
+      "science",
+      "pursuit",
+      "inspired",
+      "research",
+      "inspire"
     ]
   },
   {
@@ -1957,6 +2869,26 @@
       "Aadhaar Card / PAN Card (for ID verification)",
       "Educational certificates",
       "Resume/CV"
+    ],
+    "keywords": [
+      "employment",
+      "jobs",
+      "career",
+      "work",
+      "skill",
+      "training",
+      "placement",
+      "internship",
+      "youth",
+      "rozgar",
+      "vocational",
+      "apprenticeship",
+      "national",
+      "service",
+      "government scheme",
+      "sarkari yojana",
+      "benefit",
+      "direct benefit transfer"
     ]
   },
   {
@@ -1996,6 +2928,23 @@
     "requiredDocuments": [
       "Institution Registration Details",
       "Infrastructure availability proof (for ATL/AIC)"
+    ],
+    "keywords": [
+      "msme",
+      "business",
+      "startup",
+      "entrepreneur",
+      "enterprise",
+      "industry",
+      "manufacturing",
+      "trade",
+      "commerce",
+      "company",
+      "small business",
+      "micro",
+      "atal",
+      "innovation",
+      "mission"
     ]
   },
   {
@@ -2036,6 +2985,26 @@
       "Aadhaar Card",
       "Land ownership or tenancy documents",
       "Passport size photographs"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "credit",
+      "card"
     ]
   },
   {
@@ -2075,6 +3044,27 @@
     "requiredDocuments": [
       "Aadhaar Card",
       "Land details (Khasra/Khatauni)"
+    ],
+    "keywords": [
+      "farmer",
+      "farm",
+      "kisan",
+      "agriculture",
+      "crop",
+      "cultivation",
+      "rural",
+      "land",
+      "irrigation",
+      "soil",
+      "harvest",
+      "tractor",
+      "seed",
+      "fertilizer",
+      "subsidy",
+      "agri",
+      "health",
+      "card",
+      "scheme"
     ]
   },
   {
@@ -2111,7 +3101,26 @@
         "value": "Rural"
       }
     ],
-    "requiredDocuments": []
+    "requiredDocuments": [],
+    "keywords": [
+      "housing",
+      "house",
+      "home",
+      "construction",
+      "shelter",
+      "accommodation",
+      "residential",
+      "awwas",
+      "pmay",
+      "property",
+      "building",
+      "jeevan",
+      "mission",
+      "government scheme",
+      "sarkari yojana",
+      "benefit",
+      "direct benefit transfer"
+    ]
   },
   {
     "externalId": "SEED-MISC-012",
@@ -2151,6 +3160,23 @@
       "Aadhaar Card",
       "Bank Account Details",
       "BPL Ration Card (if applicable)"
+    ],
+    "keywords": [
+      "housing",
+      "house",
+      "home",
+      "construction",
+      "shelter",
+      "accommodation",
+      "residential",
+      "awwas",
+      "pmay",
+      "property",
+      "building",
+      "swachh",
+      "bharat",
+      "mission",
+      "gramin"
     ]
   },
   {
@@ -2190,6 +3216,26 @@
     "requiredDocuments": [
       "Aadhaar Card",
       "Mother and Child Protection (MCP) Card"
+    ],
+    "keywords": [
+      "women",
+      "mahila",
+      "female",
+      "girl",
+      "mother",
+      "maternity",
+      "pregnancy",
+      "widow",
+      "empowerment",
+      "lady",
+      "shg",
+      "self help group",
+      "nari",
+      "poshan",
+      "abhiyaan",
+      "national",
+      "nutrition",
+      "mission"
     ]
   }
 ]

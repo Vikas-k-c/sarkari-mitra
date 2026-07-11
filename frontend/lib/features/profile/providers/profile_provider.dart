@@ -11,7 +11,6 @@ class ProfileState {
   bool get isComplete => profile != null && profile!.isNotEmpty;
 
   ProfileState({this.isLoading = false, this.error, this.user, this.profile});
-
   ProfileState copyWith({bool? isLoading, String? error, Map<String, dynamic>? user, Map<String, dynamic>? profile, bool clearError = false}) {
     return ProfileState(
       isLoading: isLoading ?? this.isLoading,
@@ -82,5 +81,5 @@ class ProfileNotifier extends StateNotifier<ProfileState> {
 }
 
 final profileProvider = StateNotifierProvider<ProfileNotifier, ProfileState>((ref) {
-  return ProfileNotifier(ref.read(apiClientProvider));
-});
+  return ProfileNotifier(ref.read(apiClientProvider));});
+  

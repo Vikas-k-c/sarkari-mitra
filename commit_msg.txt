@@ -1,0 +1,13 @@
+feat: release Sarkari Mitra v1.0
+
+- Added personalized recommendation engine
+- Integrated Elasticsearch search with autocomplete and fuzzy search
+- Added Gemini + Qdrant RAG chatbot
+- Implemented voice-enabled AI assistant
+- Added bookmarks and interaction tracking
+- Built curated government scheme knowledge base (50 verified schemes)
+- Implemented ingestion pipeline with GitHub Actions synchronization
+- Added index versioning and automatic Elasticsearch validation
+- Improved production logging, health checks and environment validation
+- Added deployment verification workflow
+- Prepared project for Render, Neon, Elastic Cloud and Qdrant Cloud deployment

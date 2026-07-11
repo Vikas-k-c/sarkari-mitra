@@ -85,9 +85,27 @@ export class RecommendationService {
     return { score, explanations };
   }
 
-  static async logInteraction(userId: string, schemeId: string, type: string) {
-    return prisma.userSchemeInteraction.create({
-      data: { userId, schemeId, type }
+
+  static async getTrending() {
+    // Trending based on interactions
+    const interactions = await prisma.userSchemeInteraction.groupBy({
+      by: ['schemeId'],
+      _count: { schemeId: true },
+      orderBy: { _count: { schemeId: 'desc' } },
+      take: 10
     });
+
+    if (interactions.length === 0) {
+      return [];
+    }
+
+    const schemeIds = interactions.map(i => i.schemeId);
+    const schemes = await prisma.scheme.findMany({
+      where: { id: { in: schemeIds } },
+      include: { category: true }
+    });
+
+    // Sort to match the order of interactions
+    return schemes.sort((a, b) => schemeIds.indexOf(a.id) - schemeIds.indexOf(b.id));
   }
 }

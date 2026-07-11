@@ -11,9 +11,7 @@ class CategorySchemesScreen extends ConsumerWidget {
   const CategorySchemesScreen({
     super.key,
     required this.category,
-    required this.allSchemes,
-  });
-
+    required this.allSchemes,});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(localeProvider);
@@ -46,7 +44,7 @@ class CategorySchemesScreen extends ConsumerWidget {
   }
 
   Widget _buildSchemeCard(BuildContext context, Map<String, dynamic> scheme, String locale) {
-    final cat = scheme['categoryName'] ?? scheme['category']?['name'] ?? 'General';
+    final cat = scheme['categoryName'] ?? (scheme['category'] is Map ? scheme['category']['name'] : scheme['category']) ?? 'General';
     String deadlineStr = '31 Dec 2026';
     if (scheme['applicationDeadline'] != null) {
       try {
@@ -59,8 +57,8 @@ class CategorySchemesScreen extends ConsumerWidget {
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.grey.withOpacity(0.2)),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 10, offset: const Offset(0, 4))],
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 10, offset: const Offset(0, 4))],
       ),
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -73,12 +71,12 @@ class CategorySchemesScreen extends ConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(color: Colors.orange.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
+                  decoration: BoxDecoration(color: Colors.orange.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
                   child: Text(cat, style: TextStyle(color: Colors.orange.shade800, fontSize: 12, fontWeight: FontWeight.bold)),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(color: Colors.red.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
+                  decoration: BoxDecoration(color: Colors.red.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -106,7 +104,7 @@ class CategorySchemesScreen extends ConsumerWidget {
               const SizedBox(height: 8),
               Container(
                 padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(color: Colors.green.withOpacity(0.05), borderRadius: BorderRadius.circular(8)),
+                decoration: BoxDecoration(color: Colors.green.withValues(alpha: 0.05), borderRadius: BorderRadius.circular(8)),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

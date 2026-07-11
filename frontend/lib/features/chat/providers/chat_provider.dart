@@ -4,17 +4,14 @@ import 'package:sarkari_mitra/core/localization/locale_provider.dart';
 
 final chatProvider = StateNotifierProvider<ChatNotifier, ChatState>((ref) {
   final locale = ref.watch(localeProvider);
-  return ChatNotifier(ref.read(apiClientProvider), locale);
-});
-
-class ChatState {
+  return ChatNotifier(ref.read(apiClientProvider), locale);});
+  class ChatState {
   final String? sessionId;
   final List<ChatMessage> messages;
   final bool isLoading;
   final String? error;
   
   ChatState({this.sessionId, this.messages = const [], this.isLoading = false, this.error});
-  
   ChatState copyWith({String? sessionId, List<ChatMessage>? messages, bool? isLoading, String? error, bool clearError = false}) {
     return ChatState(
       sessionId: sessionId ?? this.sessionId,
@@ -29,7 +26,7 @@ class ChatMessage {
   final String role;
   final String content;
   ChatMessage({required this.role, required this.content});
-}
+  }
 
 class ChatNotifier extends StateNotifier<ChatState> {
   final ApiClient _api;
@@ -59,7 +56,7 @@ class ChatNotifier extends StateNotifier<ChatState> {
     state = state.copyWith(isLoading: true, clearError: true);
     try {
       final response = await _api.post('/chat/sessions', {'language': _locale});
-      state = state.copyWith(
+  state = state.copyWith(
         sessionId: response['data']['id'],
         isLoading: false,
       );
@@ -86,10 +83,8 @@ class ChatNotifier extends StateNotifier<ChatState> {
     try {
       final response = await _api.post('/chat/sessions/${state.sessionId}/message', {
         'message': text,
-        'language': _locale,
-      });
-      
-      final aiMessage = ChatMessage(role: 'ai', content: response?['data']?['content'] ?? 'Error: Empty response');
+        'language': _locale,});
+  final aiMessage = ChatMessage(role: 'ai', content: response?['data']?['content'] ?? 'Error: Empty response');
       state = state.copyWith(
         messages: [...newMessages, aiMessage],
         isLoading: false,

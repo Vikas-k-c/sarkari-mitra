@@ -1,5 +1,6 @@
 import "dotenv/config";
 import { z } from "zod";
+import { logger } from "../utils/logger";
 
 const jwtDurationSchema = z
   .string()
@@ -33,6 +34,7 @@ const envSchema = z.object({
   DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),
   JWT_SECRET: z.string().min(32, "JWT_SECRET must contain at least 32 characters"),
   JWT_EXPIRES_IN: jwtDurationSchema,
+  JWT_REFRESH_SECRET: z.string().min(32, "JWT_REFRESH_SECRET must contain at least 32 characters").default("placeholder-refresh-secret-which-must-be-changed-in-production"),
   JWT_ISSUER: z.string().min(1).default("sarkari-mitra-api"),
   JWT_AUDIENCE: z.string().min(1).default("sarkari-mitra-client"),
   BCRYPT_SALT_ROUNDS: z.coerce.number().int().min(10).max(15).default(12),
@@ -62,24 +64,44 @@ const envSchema = z.object({
     .int()
     .positive()
     .default(5_000),
-  GEMINI_API_KEY: z.string().optional(),
-  QDRANT_URL: z.string().default("http://localhost:6333"),
-  QDRANT_API_KEY: z.string().optional(),
+  GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"),
+  QDRANT_URL: z.string().min(1, "QDRANT_URL is required").default("http://localhost:6333"),
+  QDRANT_API_KEY: z.string().min(1, "QDRANT_API_KEY is required").default("placeholder_for_local"),
+  ELASTICSEARCH_NODE: z.string().optional(),
+  ELASTICSEARCH_CLOUD_ID: z.string().optional(),
+  ELASTICSEARCH_API_KEY: z.string().optional(),
+  SCHEMES_INDEX_VERSION: z.string().min(1, 'SCHEMES_INDEX_VERSION is required').default("1"),
+  CRON_SCHEDULE: z.string().min(1, 'CRON_SCHEDULE is required').default("0 0 * * *"),
+  SYNC_SECRET: z.string().min(1, 'SYNC_SECRET is required'),
+  DATAGOV_API_KEY: z.string().optional(),
+  DATAGOV_RESOURCE_IDS: z
+    .string()
+    .optional()
+    .transform((val) => (val ? val.split(',').map((id) => id.trim()) : undefined)),
+}).refine(data => data.ELASTICSEARCH_NODE || (data.ELASTICSEARCH_CLOUD_ID && data.ELASTICSEARCH_API_KEY), {
+  message: "Either ELASTICSEARCH_NODE or both ELASTICSEARCH_CLOUD_ID and ELASTICSEARCH_API_KEY must be provided",
+  path: ["ELASTICSEARCH_NODE"]
 });
 
-const parsedEnv = envSchema.safeParse(process.env);
-
-if (!parsedEnv.success) {
-  const details = parsedEnv.error.issues
-    .map((issue) => `${issue.path.join(".")}: ${issue.message}`)
-    .join(", ");
-
-  throw new Error(`Invalid environment configuration: ${details}`);
+function validateEnv() {
+  const result = envSchema.safeParse(process.env);
+  if (!result.success) {
+    logger.error('✗ Missing or invalid environment variables:');
+    result.error.issues.forEach((err: any) => {
+      logger.error(`  - ${err.path.join('.')}: ${err.message}`);
+    });
+    console.error('✗ Missing or invalid environment variables. Check logs for details.');
+    process.exit(1);
+  }
+  logger.info('✓ Loaded variables');
+  return result.data;
 }
 
+const parsedData = validateEnv();
+
 export const env = {
-  ...parsedEnv.data,
-  CORS_ORIGINS: parsedEnv.data.CORS_ORIGINS.split(",")
+  ...parsedData,
+  CORS_ORIGINS: parsedData.CORS_ORIGINS.split(",")
     .map((origin) => origin.trim())
     .filter(Boolean),
 };

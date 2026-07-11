@@ -1,367 +1,219 @@
-# PROJECT_CONTEXT.md
-
-# Sarkari Mitra
+# Sarkari Mitra - Project Context
 
 ## Project Overview
 
-Sarkari Mitra is an AI-powered Government Scheme Discovery Platform designed to help rural, semi-literate and underserved citizens discover, understand and apply for relevant government welfare schemes.
+Sarkari Mitra is an AI-powered Government Scheme Recommendation Platform that helps citizens discover welfare schemes using intelligent search, personalized recommendations, and conversational AI.
 
-The platform combines semantic search, eligibility-based recommendations, Retrieval-Augmented Generation (RAG), multilingual AI conversations and voice support to provide a simple conversational experience.
-
-The project is designed as a production-oriented full-stack application demonstrating scalable backend architecture, AI integration and modern search technologies.
+The platform combines Elasticsearch, Qdrant, Gemini AI, PostgreSQL, and Flutter to deliver fast search, semantic understanding, and profile-based recommendations.
 
 ---
 
-# Current Status
-
-## Project Phase
-
-✅ Day 1 Completed
-
-✅ Day 2 Completed
-
-✅ Day 3 Completed
-
-✅ Day 4 Completed
-
-Current Stage:
-
-Placement Ready
-
----
-
-# Technology Stack
-
-## Frontend
-
-* Flutter
-* Provider/Riverpod (existing project state management)
-* Material Design 3
-
-## Backend
-
-* Node.js
-* Express.js
-* TypeScript
-
-## Database
-
-* PostgreSQL
-* Prisma ORM
-
-## Search
-
-* Elasticsearch
-
-## Vector Database
-
-* Qdrant
-
-## AI
-
-* Google Gemini API
-
-## Authentication
-
-* JWT
-* BCrypt
-
-## Validation
-
-* Zod
-
----
-
-# Implemented Features
-
-## Authentication
-
-* User Registration
-* User Login
-* JWT Authentication
-* Authorization Middleware
-
----
-
-## User Profile
-
-Stores:
-
-* Name
-* Age
-* Gender
-* Occupation
-* Income
-* State
-* Category
-* Preferred Language
-
-Supports:
-
-* Profile Editing
-* Personalized Recommendations
-
----
-
-## Government Scheme Module
-
-Implemented:
-
-* Scheme Management
-* Categories
-* Eligibility Rules
-* Required Documents
-* Official Application Links
-* Scheme Sources
-* State Support
-* National & Karnataka Schemes
-
----
-
-## Search
-
-Implemented:
-
-* Elasticsearch Full-text Search
-* Fuzzy Search
-* Category Search
-* State Search
-* Filter Search
-
----
-
-## Recommendation Engine
-
-Implemented:
-
-* Eligibility Matching
-* Recommendation Scoring
-* Recommendation Explanation
-* Personalized Homepage
-* Dynamic Recommendations
-
----
-
-## Government Scheme Synchronization
-
-Implemented:
-
-* Source Adapters
-* Data Validation
-* Data Normalization
-* Duplicate Detection
-* Scheduler
-* Synchronization Pipeline
-* Elasticsearch Re-indexing
-* Qdrant Vector Updates
-
----
-
-## AI Assistant
-
-Implemented:
-
-* Gemini Integration
-* RAG Pipeline
-* Prompt Builder
-* Context Retrieval
-* Personalized AI Responses
-* Conversation History
-* Markdown Rendering
-
----
-
-## Multilingual Support
-
-Supported Languages:
-
-* English
-* Hindi
-
-Language is selected using the user profile.
-
----
-
-## Voice Support
-
-Implemented:
-
-* Speech-to-Text
-* Text-to-Speech
-* Voice Query Support
-
----
-
-## Homepage
-
-Implemented:
-
-* Personalized Welcome
-* Recommended Schemes
-* Trending Schemes
-* Newly Added Schemes
-* Search Bar
-* Dynamic Filters
-* Quick Categories
-
----
-
-## Filters
-
-Supported Filters:
-
-* Farmers
-* Women
-* Students
-* Senior Citizens
-* Daily Wage Workers
-* Healthcare
-* Housing
-* Scholarships
-* Business
-* SC/ST
-
----
-
-## Chat Experience
-
-Implemented:
-
-* Modern Chat UI
-* Typing Indicator
-* Suggested Questions
-* Source Cards
-* Apply Buttons
-* Recommendation Cards
-* Conversation History
-
----
-
-# Current Architecture
-
-Authentication
-
-Client
-→ Auth Controller
-→ Auth Service
-→ Prisma
-→ PostgreSQL
-
----
-
-Recommendation Flow
-
-Profile
-→ Recommendation Engine
-→ Scheme Ranking
-→ Homepage
-
----
-
-Search Flow
-
-User Query
-→ Elasticsearch
-→ PostgreSQL
-→ Results
-
----
-
-AI Flow
-
-User Question
-→ Embedding Service
-→ Qdrant
-→ Relevant Schemes
-→ Prompt Builder
-→ Gemini
-→ AI Response
-
----
-
-Government Synchronization
-
-Government Sources
-→ Source Adapters
-→ Validation
-→ Normalization
-→ PostgreSQL
-→ Elasticsearch
-→ Qdrant
-
----
-
-# Existing Modules
-
-Backend
-
-* Authentication
-* Profiles
-* Schemes
-* Search
-* Recommendations
-* Ingestion
-* Chat
-* Gemini
-* Embeddings
-* RAG
+## Tech Stack
 
 Frontend
+- Flutter
+- Material Design 3
 
-* Authentication
-* Homepage
-* Search
-* Recommendations
-* AI Chat
-* Scheme Details
-* Profile
-* Voice
-* Filters
+Backend
+- Node.js
+- Express
+- TypeScript
 
----
+Database
+- PostgreSQL
+- Prisma ORM
 
-# Development Principles
+Search
+- Elasticsearch
 
-* Controller → Service → Prisma Architecture
-* Modular Design
-* Repository-friendly Structure
-* TypeScript Strict Mode
-* Production-ready Code
-* Existing modules should never be regenerated
-* Extend architecture only
+Vector Database
+- Qdrant
 
----
+LLM
+- Google Gemini
 
-# Current Scope
+Deployment
+- Render
+- Neon PostgreSQL
+- Elastic Cloud
+- Qdrant Cloud
 
-Supported Schemes
-
-* Central Government Schemes
-* Karnataka Government Schemes
-
-Supported Languages
-
-* English
-* Hindi
-
-AI Features
-
-* RAG
-* Personalized Recommendations
-* Semantic Search
-* AI Chat
+Automation
+- GitHub Actions
 
 ---
 
-# Future Direction
+## Completed Modules
 
-The project is feature complete for placement purposes.
+### Authentication
+- JWT Authentication
+- Refresh Tokens
+- Protected Routes
 
-Future work should focus only on:
+### User Profile
+- Demographic Information
+- Occupation
+- Income
+- State
+- Eligibility Profile
 
-* More Government Sources
-* Additional States
-* Better Voice Experience
-* Deployment
-* Monitoring
-* Production Scalability
+### Government Schemes
+
+- 50 Verified Government Schemes
+
+Categories include:
+
+- Farmers
+- Students
+- Women
+- MSME
+- Healthcare
+- Housing
+- Employment
+- Senior Citizens
+- Social Welfare
+
+---
+
+### Recommendation Engine
+
+Completed
+
+Features
+
+- Personalized Recommendations
+- Eligibility Scoring
+- Recommendation Explanation
+- Trending Schemes
+- Recently Added Schemes
+
+---
+
+### Search
+
+Completed
+
+Powered by Elasticsearch
+
+Features
+
+- Full Text Search
+- Autocomplete
+- Fuzzy Search
+- Keyword Search
+- Search Ranking
+- Search Filters
+- Recent Searches
+
+---
+
+### AI Chat
+
+Completed
+
+Powered by
+
+- Gemini
+- Qdrant
+
+Features
+
+- RAG
+- Context Retrieval
+- Voice Input
+- Text To Speech
+- Markdown Responses
+- Source References
+
+---
+
+### Homepage
+
+Completed
+
+Features
+
+- Recommended For You
+- Explore All Schemes
+- Browse by Category
+- Trending
+- Recently Added
+
+---
+
+### Explore
+
+Completed
+
+- Pagination
+- Infinite Scroll
+- Filters
+- Search
+
+---
+
+### Bookmarks
+
+Completed
+
+- Save Scheme
+- Remove Scheme
+- Persistent Favorites
+
+---
+
+### Scheme Details
+
+Completed
+
+Displays
+
+- Benefits
+- Eligibility
+- Documents
+- FAQs
+- Official Links
+- Recommendation Reason
+
+---
+
+### Ingestion Pipeline
+
+Completed
+
+Features
+
+- Seed Adapter
+- Duplicate Detection
+- GitHub Actions Sync
+- Elasticsearch Indexing
+- Qdrant Vectorization
+- Automatic Validation
+- Structured Logging
+
+---
+
+### Production
+
+Completed
+
+- Environment Validation
+- Health Endpoint
+- Graceful Shutdown
+- Production Verification Script
+- Secure Synchronization
+- Deployment Ready
+
+---
+
+## Current Status
+
+Development Complete
+
+Status
+
+Deployment Ready
+
+Version
+
+v1.0.0

@@ -6,7 +6,6 @@ import 'package:sarkari_mitra/features/home/screens/home_screen.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
-
   @override
   ConsumerState<LoginScreen> createState() => _LoginScreenState();
 }
@@ -43,19 +42,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
             context,
             MaterialPageRoute(builder: (_) => const HomeScreen()),
           );
-        }
-      });
-      next.whenOrNull(error: (error, _) {
+        }});
+  next.whenOrNull(error: (error, _) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(error.toString().replaceAll('Exception: ', '')),
             backgroundColor: Colors.redAccent,
           ),
-        );
-      });
-    });
-
-    return Scaffold(
+        );});
+  });
+  return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

@@ -3,10 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sarkari_mitra/core/api/api_client.dart';
 
 final authProvider = StateNotifierProvider<AuthNotifier, AsyncValue<bool>>((ref) {
-  return AuthNotifier(ref.read(apiClientProvider));
-});
-
-class AuthNotifier extends StateNotifier<AsyncValue<bool>> {
+  return AuthNotifier(ref.read(apiClientProvider));});
+  class AuthNotifier extends StateNotifier<AsyncValue<bool>> {
   final ApiClient _api;
 
   AuthNotifier(this._api) : super(const AsyncValue.loading()) {
@@ -32,10 +30,8 @@ class AuthNotifier extends StateNotifier<AsyncValue<bool>> {
     try {
       final response = await _api.post('/auth/login', {
         'mobile': mobile,
-        'password': password,
-      });
-      
-      final prefs = await SharedPreferences.getInstance();
+        'password': password,});
+  final prefs = await SharedPreferences.getInstance();
       await prefs.setString('auth_token', response['data']['accessToken']);
       
       state = const AsyncValue.data(true);
@@ -50,10 +46,8 @@ class AuthNotifier extends StateNotifier<AsyncValue<bool>> {
       await _api.post('/auth/register', {
         'fullName': fullName,
         'mobile': mobile,
-        'password': password,
-      });
-      
-      // We do NOT log them in automatically. We return true so UI can redirect.
+        'password': password,});
+  // We do NOT log them in automatically. We return true so UI can redirect.
       state = const AsyncValue.data(false);
       return true;
     } catch (e, st) {

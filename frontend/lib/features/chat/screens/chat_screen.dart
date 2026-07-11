@@ -7,7 +7,6 @@ import 'package:sarkari_mitra/core/localization/locale_provider.dart';
 
 class ChatScreen extends ConsumerStatefulWidget {
   const ChatScreen({super.key});
-
   @override
   ConsumerState<ChatScreen> createState() => _ChatScreenState();
 }
@@ -21,6 +20,15 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   void initState() {
     super.initState();
     Future.microtask(() => ref.read(chatProvider.notifier).initSession());
+    Future.microtask(() => ref.read(voiceServiceProvider).init());
+  }
+
+  @override
+  void dispose() {
+    ref.read(voiceServiceProvider).cancelListening();
+    _textController.dispose();
+    _scrollController.dispose();
+    super.dispose();
   }
 
   void _scrollToBottom() {
@@ -37,36 +45,94 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     final voiceService = ref.read(voiceServiceProvider);
     final locale = ref.read(localeProvider);
     
-    String speechLocale = 'en-IN';
-    if (locale == 'hi') speechLocale = 'hi-IN'; // STT usually requires full locale
+    String speechLocale = 'en_IN';
+    if (locale == 'hi') speechLocale = 'hi_IN';
 
     if (_isListening) {
       await voiceService.stopListening();
-      setState(() => _isListening = false);
+      if (mounted) setState(() => _isListening = false);
       if (_textController.text.isNotEmpty && _textController.text != "Listening...") {
         _sendMessage();
       } else {
         _textController.clear();
       }
     } else {
-      setState(() => _isListening = true);
+      if (mounted) setState(() => _isListening = true);
       _textController.text = "Listening...";
-      await voiceService.startListening((text) {
-        setState(() {
-          _textController.text = text;
-        });
-      }, speechLocale, onStatus: (status) {
-        if (status == 'notListening' || status == 'done') {
-          if (mounted) {
-            setState(() => _isListening = false);
-            if (_textController.text.isNotEmpty && _textController.text != "Listening...") {
-              _sendMessage();
-            } else if (_textController.text == "Listening...") {
-              _textController.clear();
+      
+      bool _isFinalProcessed = false;
+
+      final started = await voiceService.startListening(
+        preferredLocale: speechLocale,
+        onResult: (text, isFinal) async {
+          if (!mounted) return;
+          setState(() {
+            _textController.text = text;
+          });
+          
+          if (isFinal && !_isFinalProcessed) {
+            _isFinalProcessed = true;
+            await voiceService.stopListening();
+            
+            // Wait briefly for UI sync
+            await Future.delayed(const Duration(milliseconds: 300));
+            
+            if (mounted) {
+              setState(() => _isListening = false);
+              if (_textController.text.isNotEmpty && _textController.text != "Listening...") {
+                debugPrint('[STT] Message Sent automatically');
+                _sendMessage();
+              } else {
+                _textController.clear();
+              }
             }
           }
+        },
+        onStatus: (status) {
+          if (status == 'done' && !_isFinalProcessed) {
+            if (mounted) {
+              setState(() => _isListening = false);
+              if (_textController.text.isNotEmpty && _textController.text != "Listening...") {
+                // If it just stopped without a final flag, send whatever we have
+                _sendMessage();
+              } else if (_textController.text == "Listening...") {
+                _textController.clear();
+              }
+            }
+          } else if (status == 'notListening' && !_isFinalProcessed && _textController.text == "Listening...") {
+             if (mounted) {
+              setState(() => _isListening = false);
+              _textController.clear();
+             }
+          }
+        },
+        onError: (errorMsg) {
+          if (mounted) {
+            setState(() => _isListening = false);
+            _textController.clear();
+            
+            String displayError = 'Speech error: $errorMsg';
+            if (errorMsg.contains('error_no_match')) {
+              displayError = 'Could not hear anything clearly. Please try again.';
+            } else if (errorMsg.contains('error_network')) {
+              displayError = 'Network error during speech recognition.';
+            } else if (errorMsg.contains('permission_denied')) {
+              displayError = 'Microphone permission denied. Please enable it in settings.';
+            } else if (errorMsg.contains('speech_unavailable')) {
+              displayError = 'Speech Services unavailable. Please install Google Speech Recognition.';
+            }
+            
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(displayError), backgroundColor: Colors.redAccent),
+            );
+          }
         }
-      });
+      );
+      
+      if (!started && mounted) {
+        setState(() => _isListening = false);
+        _textController.clear();
+      }
     }
   }
 
@@ -105,10 +171,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       }
       if (next.messages.length > (prev?.messages.length ?? 0)) {
         Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
-      }
-    });
-
-    return Scaffold(
+      }});
+  return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
         title: const Row(
@@ -180,7 +244,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 10,
               offset: const Offset(0, 4),
             )
@@ -261,7 +325,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, -5))
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, -5))
         ],
       ),
       child: SafeArea(

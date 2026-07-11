@@ -4,7 +4,6 @@ import 'package:sarkari_mitra/features/profile/providers/profile_provider.dart';
 
 class ProfileSetupScreen extends ConsumerStatefulWidget {
   const ProfileSetupScreen({super.key});
-
   @override
   ConsumerState<ProfileSetupScreen> createState() => _ProfileSetupScreenState();
 }
@@ -41,10 +40,8 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
           _education = _educationOptions.contains(p['education']) ? p['education'] : 'Below 10th';
           _stateController.text = p['state'] ?? '';
           _districtController.text = p['district'] ?? '';
-          _category = _categoryOptions.contains(p['category']) ? p['category'] : 'General';
-        });
-      }
-    });
+          _category = _categoryOptions.contains(p['category']) ? p['category'] : 'General';});
+  }});
   }
 
   @override
@@ -101,10 +98,8 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
             backgroundColor: Colors.redAccent,
           ),
         );
-      }
-    });
-
-    return Scaffold(
+      }});
+  return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text('Complete Your Profile'),
@@ -177,7 +172,7 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
 
                     // Gender Dropdown
                     DropdownButtonFormField<String>(
-                      value: _gender,
+                      initialValue: _gender,
                       decoration: InputDecoration(
                         labelText: 'Gender',
                         prefixIcon: const Icon(Icons.person),
@@ -221,7 +216,7 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
 
                     // Education
                     DropdownButtonFormField<String>(
-                      value: _education,
+                      initialValue: _education,
                       decoration: InputDecoration(
                         labelText: 'Education Qualification',
                         prefixIcon: const Icon(Icons.school),
@@ -260,7 +255,7 @@ class _ProfileSetupScreenState extends ConsumerState<ProfileSetupScreen> {
 
                     // Category Dropdown
                     DropdownButtonFormField<String>(
-                      value: _category,
+                      initialValue: _category,
                       decoration: InputDecoration(
                         labelText: 'Category',
                         prefixIcon: const Icon(Icons.group),

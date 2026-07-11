@@ -5,7 +5,6 @@ import 'package:sarkari_mitra/features/profile/screens/profile_setup_screen.dart
 
 class ProfileViewScreen extends ConsumerWidget {
   const ProfileViewScreen({super.key});
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final profileState = ref.watch(profileProvider);
@@ -70,7 +69,7 @@ class ProfileViewScreen extends ConsumerWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 5),
           ),

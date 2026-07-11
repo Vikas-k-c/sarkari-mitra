@@ -15,7 +15,6 @@ void main() {
 
 class SarkariMitraApp extends ConsumerWidget {
   const SarkariMitraApp({super.key});
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeProvider);

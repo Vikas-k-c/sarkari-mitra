@@ -1,0 +1,67 @@
+name: Government Scheme Synchronization
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Runs every day at 2:00 AM UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  sync_schemes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Synchronization Pipeline
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const BACKEND_URL = process.env.API_BASE_URL || 'https://api.sarkari-mitra.com'; // Replace with real production URL
+            const endpoint = `${BACKEND_URL}/api/v1/ingestion/run`;
+            const token = process.env.INGESTION_SECRET_TOKEN;
+            
+            if (!token) {
+              core.setFailed('INGESTION_SECRET_TOKEN is not set in GitHub Secrets.');
+              return;
+            }
+
+            console.log(`Triggering synchronization at: ${endpoint}`);
+            
+            let attempts = 0;
+            const maxAttempts = 2; // Retry once on failure
+            
+            while (attempts < maxAttempts) {
+              attempts++;
+              try {
+                const response = await fetch(endpoint, {
+                  method: 'POST',
+                  headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                  }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                  console.log('✅ Synchronization completed successfully!');
+                  console.log(JSON.stringify(data.data, null, 2));
+                  return; // Exit loop on success
+                } else {
+                  console.error(`❌ Attempt ${attempts} failed:`, data);
+                  if (attempts >= maxAttempts) {
+                    core.setFailed(`Synchronization failed after ${maxAttempts} attempts: ${JSON.stringify(data)}`);
+                  }
+                }
+              } catch (error) {
+                console.error(`❌ Attempt ${attempts} encountered network error:`, error.message);
+                if (attempts >= maxAttempts) {
+                  core.setFailed(`Synchronization failed due to network error: ${error.message}`);
+                }
+              }
+              
+              if (attempts < maxAttempts) {
+                console.log('Retrying in 10 seconds...');
+                await new Promise(resolve => setTimeout(resolve, 10000));
+              }
+            }
+        env:
+          INGESTION_SECRET_TOKEN: ${{ secrets.INGESTION_SECRET_TOKEN }}
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}

@@ -35,11 +35,37 @@ const shutdown = async (signal: string): Promise<void> => {
 
 const startServer = async (): Promise<void> => {
   await connectDatabase();
-  const { initializeElasticsearch } = await import('./elastic/client');
-  await initializeElasticsearch();
+  const { initializeElasticsearch, elasticClient } = await import('./elastic/client');
+  const { IngestionService } = await import('./modules/ingestion/ingestion.service');
   
-  const { startIngestionScheduler } = await import('./modules/ingestion/scheduler');
-  startIngestionScheduler();
+  const wasRebuilt = await initializeElasticsearch();
+  
+  if (wasRebuilt) {
+    console.log(`[Index] Running Ingestion...`);
+    try {
+      const ingestionService = new IngestionService();
+      await ingestionService.runPipeline(true);
+      
+      // Post-Rebuild Verification
+      const countRes = await elasticClient.count({ index: 'schemes' });
+      console.log(`[Index] Documents Indexed : ${countRes.count}`);
+      
+      if (countRes.count === 0) {
+        throw new Error('Ingestion completed but 0 documents were indexed.');
+      }
+      
+      const sampleRes = await elasticClient.search({ index: 'schemes', size: 1 });
+      const sample = sampleRes.hits.hits[0]?._source as any;
+      
+      if (!sample || !sample.title || !sample.keywords || !sample.categoryName || !sample.governmentLevel || !sample.verificationStatus || !sample.benefits || !sample.description) {
+        throw new Error('Sample document failed structural validation (missing required fields).');
+      }
+      console.log(`[Index] Verification successful.`);
+    } catch (e) {
+      console.error(`[Index] Startup failed during ingestion/verification:`, e);
+      throw e;
+    }
+  }
 
   server = app.listen(env.PORT, () => {
     logger.info("Sarkari Mitra API started", {

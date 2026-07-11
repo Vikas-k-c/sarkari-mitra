@@ -12,6 +12,8 @@ schemeRouter.post(
 );
 
 schemeRouter.get('/', SchemeController.getSchemes);
+schemeRouter.get('/categories', SchemeController.getCategories);
+schemeRouter.get('/metrics', SchemeController.getMetrics);
 schemeRouter.get('/:id', SchemeController.getSchemeById);
 
 export default schemeRouter;
